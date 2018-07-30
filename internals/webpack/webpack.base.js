@@ -1,6 +1,6 @@
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const plugins = [
@@ -10,7 +10,7 @@ const plugins = [
   }),
   new WebpackPwaManifest({
     name: 'Mambo Jambo Studios',
-    short_name: 'MJB',
+    short_name: 'MJS',
     description: 'Mambo Jambo Studios webpage',
     background_color: '#fafafa',
     theme_color: '#fafafa',
@@ -21,7 +21,9 @@ const plugins = [
       },
     ],
   }),
-  new FaviconsWebpackPlugin(path.join(process.cwd(), 'src/images/mjs-logo-black-512x512.png'),),
+  new FaviconsWebpackPlugin(
+    path.join(process.cwd(), 'src/images/mjs-logo-black-512x512.png'),
+  ),
 ];
 
 module.exports = options => ({
@@ -32,11 +34,13 @@ module.exports = options => ({
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
+      },
+    ],
   },
   devServer: options.devServer,
   plugins: options.plugins.concat(plugins),

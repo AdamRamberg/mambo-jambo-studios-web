@@ -1,15 +1,17 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import { AppWrapper } from './styles';
-import HomePage from '../HomePage/loadable';
+import { Helmet } from './helmet';
+import { Routes } from './routes';
 
 const App = () => (
-  <AppWrapper>
-    <Switch>
-      <Route path="" component={HomePage} />
-    </Switch>
-  </AppWrapper>
+  <BrowserRouter>
+    <AppWrapper>
+      <Helmet />
+      <Routes />
+    </AppWrapper>
+  </BrowserRouter>
 );
 
 export default App;
