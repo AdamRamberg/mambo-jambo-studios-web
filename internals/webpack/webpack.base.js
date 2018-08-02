@@ -16,13 +16,13 @@ const plugins = [
     theme_color: '#fafafa',
     icons: [
       {
-        src: path.resolve('src/images/mjs-logo-black-512x512.png'),
+        src: path.resolve('src/assets/images/mjs-logo-black-512x512.png'),
         sizes: [72, 96, 120, 128, 144, 152, 167, 180, 192, 384, 512],
       },
     ],
   }),
   new FaviconsWebpackPlugin(
-    path.join(process.cwd(), 'src/images/mjs-logo-black-512x512.png'),
+    path.join(process.cwd(), 'src/assets/images/mjs-logo-black-512x512.png'),
   ),
 ];
 
@@ -37,6 +37,15 @@ module.exports = options => ({
         use: [
           {
             loader: 'babel-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
           },
         ],
       },
