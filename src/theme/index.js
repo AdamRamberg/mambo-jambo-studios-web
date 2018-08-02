@@ -11,9 +11,9 @@ const theme = {
   },
   fontSize: fontSizeMajorSecond({ basePixelFontSize: 18 }),
   spacing: {
-    small: '0.5em',
-    medium: '1em',
-    large: '2em',
+    small: '0.5rem',
+    medium: '1rem',
+    large: '2rem',
   },
 };
 

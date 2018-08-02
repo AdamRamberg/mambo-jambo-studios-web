@@ -7,11 +7,13 @@ import theme from '../../theme';
 import { AppWrapper } from './styles';
 import { Helmet } from './helmet';
 import { Routes } from './routes';
+import Header from '../../components/Header';
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <BrowserRouter>
       <AppWrapper>
+        <Header />
         <Helmet />
         <Routes />
       </AppWrapper>

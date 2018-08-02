@@ -5,13 +5,13 @@ import Text from '../../components/Text';
 export const Wrapper = styled.span`
   display: inline-flex;
   width: ${({ width }) => width || '320px'};
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 `;
 
 export const StyledText = styled(Text).attrs({
   size: 'xxl',
   tag: 'div',
-  color: 'white',
+  color: 'black',
 })`
   padding: ${({ visible }) => (visible ? '0 1rem' : '0')};
   transition: flex 0.2s ease-in-out;

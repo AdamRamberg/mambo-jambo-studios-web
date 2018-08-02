@@ -7,7 +7,7 @@ export const FlexContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  padding: ${props => `0 ${props?.theme?.spacing?.large}`};
+  padding: ${({ theme }) => `0 ${theme?.spacing?.medium}`};
 `;
 
 export const StyledHeader = styled(Text).attrs({

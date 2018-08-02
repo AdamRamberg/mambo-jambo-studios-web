@@ -4,10 +4,10 @@ import { FlexContainer, StyledHeader } from './styles';
 import TextCarousel from '../TextCarousel';
 
 const textCarouselItems = [
-  { text: 'web apps', id: 0, backgroundColor: 'mediumaquamarine' },
-  { text: 'games', id: 1, backgroundColor: 'hotpink' },
-  { text: 'AR apps', id: 2, backgroundColor: 'lightskyblue' },
-  { text: 'VR experiences', id: 3, backgroundColor: 'mediumpurple' },
+  { text: 'web apps', id: 0, backgroundColor: '#09ffbf' },
+  { text: 'games', id: 1, backgroundColor: '#ffbde7' },
+  { text: 'AR apps', id: 2, backgroundColor: '#09e5ff' },
+  { text: 'VR experiences', id: 3, backgroundColor: '#ffd909' },
 ];
 
 const HomePage = () => (
