@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
 import Text from '../../components/Text';
+import { media } from '../../utils/mixins';
 
 export const Wrapper = styled.span`
-  display: inline-flex;
-  width: ${({ width }) => width || '320px'};
+  display: flex;
+  width: 100%;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+
+  ${media.xSmallUp`
+    display: inline-flex;
+    width: ${({ width }) => width || '320px'};
+  `};
 `;
 
 export const StyledText = styled(Text).attrs({

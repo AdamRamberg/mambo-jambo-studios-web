@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Text from '../../components/Text';
 
 export const FlexContainer = styled.div`
-  height: 100vh;
+  height: calc(100vh - 64px);
   display: flex;
   flex-flow: row wrap;
   align-content: center;
@@ -16,4 +16,5 @@ export const StyledHeader = styled(Text).attrs({
 })`
   flex-basis: 100%;
   margin: 0;
+  max-width: 100%;
 `;

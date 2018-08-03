@@ -7,7 +7,7 @@ import theme from '../../theme';
 import { AppWrapper } from './styles';
 import { Helmet } from './helmet';
 import { Routes } from './routes';
-import Header from '../../components/Header';
+import Header from '../Header';
 
 const App = () => (
   <ThemeProvider theme={theme}>

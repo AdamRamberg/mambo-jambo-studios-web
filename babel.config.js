@@ -14,6 +14,7 @@ module.exports = api => {
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-syntax-export-default-from',
       '@babel/plugin-proposal-optional-chaining',
+      '@babel/plugin-proposal-class-properties',
     ],
   };
 };

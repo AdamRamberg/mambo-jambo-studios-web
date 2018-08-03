@@ -30,13 +30,20 @@ injectGlobal`
     font-style: italic;
   }
 
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
   html,
   body {
     font-family: 'PT Sans';
     height: 100%;
     width: 100%;
 		margin: 0;
-  background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.primary};
   }
 
   #root {
