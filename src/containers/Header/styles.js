@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { media } from '../../utils/mixins';
+import Hamburger from '../../components/Hamburger';
 
 const HEADER_HEIGHT = '64px';
 
 export const HeaderWrapper = styled.header`
   position: sticky;
-  height: ${HEADER_HEIGHT};
+  height: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
   width: 100%;
 `;
 
@@ -21,7 +22,7 @@ export const InnerHeaderWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: ${HEADER_HEIGHT};
+  height: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
   width: auto;
   padding: 8px;
 `;
@@ -65,6 +66,7 @@ export const ListItem = styled.li`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: bold;
 `;
 
 export const LogoHamburgerContainer = styled.div`
@@ -77,23 +79,11 @@ export const LogoHamburgerContainer = styled.div`
   `};
 `;
 
-export const HamburgerContainer = styled.div`
-  cursor: pointer;
-  height: ${HEADER_HEIGHT};
-  width: ${HEADER_HEIGHT};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const StyledHamburger = styled(Hamburger)`
+  height: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
+  width: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
 
   ${media.mediumUp`
     display: none;
   `};
-`;
-
-export const HamburgerBar = styled.span`
-  background-color: black;
-  height: 2px;
-  width: 32px;
-  margin: 4px 0;
 `;

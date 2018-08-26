@@ -8,13 +8,12 @@ import {
   Nav,
   InnerHeaderWrapper,
   StyledLink,
-  HamburgerContainer,
-  HamburgerBar,
   LogoHamburgerContainer,
+  StyledHamburger,
 } from './styles';
 import Image from '../../assets/images/mjs-logo-black-512x512.png';
 
-class Header extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,11 +38,11 @@ class Header extends Component {
             <StyledLink to="/">
               <Logo src={Image} />
             </StyledLink>
-            <HamburgerContainer onClick={this.toggleNav}>
-              <HamburgerBar />
-              <HamburgerBar />
-              <HamburgerBar />
-            </HamburgerContainer>
+            <StyledHamburger
+              open={isOpen}
+              onClick={this.toggleNav}
+              animationType="elastic"
+            />
           </LogoHamburgerContainer>
           <Nav isOpen={isOpen}>
             <List>
@@ -69,5 +68,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;

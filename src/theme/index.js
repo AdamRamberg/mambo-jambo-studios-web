@@ -15,6 +15,9 @@ const theme = {
     medium: '1rem',
     large: '2rem',
   },
+  header: {
+    height: '64px',
+  },
 };
 
 export default theme;

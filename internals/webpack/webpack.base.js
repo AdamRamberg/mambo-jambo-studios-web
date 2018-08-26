@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const plugins = [
   new HtmlWebPackPlugin({
@@ -24,6 +25,12 @@ const plugins = [
   new FaviconsWebpackPlugin(
     path.join(process.cwd(), 'src/assets/images/mjs-logo-black-512x512.png'),
   ),
+  new CopyWebpackPlugin([
+    {
+      from: path.resolve(process.cwd(), 'static'),
+      to: 'static',
+    },
+  ]),
 ];
 
 module.exports = options => ({

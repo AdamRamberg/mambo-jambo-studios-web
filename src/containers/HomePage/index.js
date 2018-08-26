@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { FlexContainer, StyledHeader } from './styles';
+import { FlexContainer, StyledHeader, Wrapper } from './styles';
 import TextCarousel from '../TextCarousel';
+import ThreeContainer from '../ThreeContainer';
 
 const textCarouselItems = [
   { text: 'web apps', id: 0, backgroundColor: '#09ffbf' },
@@ -11,13 +12,16 @@ const textCarouselItems = [
 ];
 
 const HomePage = () => (
-  <FlexContainer>
-    <StyledHeader>I&apos;m Adam Ramberg</StyledHeader>
-    <StyledHeader>
-      I create&thinsp;
-      <TextCarousel items={textCarouselItems} />
-    </StyledHeader>
-  </FlexContainer>
+  <Wrapper>
+    <ThreeContainer />
+    <FlexContainer>
+      <StyledHeader>I&apos;m Adam Ramberg</StyledHeader>
+      <StyledHeader>
+        I create&thinsp;
+        <TextCarousel items={textCarouselItems} />
+      </StyledHeader>
+    </FlexContainer>
+  </Wrapper>
 );
 
 export default HomePage;

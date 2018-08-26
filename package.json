@@ -18,6 +18,7 @@
     "@babel/preset-react": "^7.0.0-beta.55",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^8.0.0-beta",
+    "copy-webpack-plugin": "^4.5.2",
     "eslint": "^5.1.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -42,6 +43,7 @@
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.4.0",
     "react-router-dom": "^4.3.1",
-    "styled-components": "^3.3.3"
+    "styled-components": "^3.3.3",
+    "three": "^0.95.0"
   }
 }

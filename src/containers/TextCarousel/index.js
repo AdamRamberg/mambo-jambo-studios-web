@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { StyledText, Wrapper } from './styles';
 
-class TextCarousel extends Component {
+export default class TextCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -53,5 +53,3 @@ TextCarousel.propTypes = {
   ).isRequired,
   width: PropTypes.string,
 };
-
-export default TextCarousel;
