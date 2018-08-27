@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { withDynamicTag } from '../../utils/withDynamicTag';
 
 const Text = styled.h1`
-  color: ${({ color, theme }) => color || theme?.color || 'black'};
+  color: ${({ color, theme }) =>
+    color || theme?.colors?.text?.primary || 'black'};
   background-color: ${({ backgroundColor }) =>
     backgroundColor || 'transparent'};
   font-size: ${({ size, theme }) =>

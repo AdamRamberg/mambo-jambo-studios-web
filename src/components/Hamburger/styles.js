@@ -147,7 +147,7 @@ export const HamburgerBox = styled.div`
 `;
 
 export const HamburgerBar = styled.span`
-  background-color: black;
+  background-color: ${({ color }) => color || 'black'};
   height: 4px;
   width: 50%;
   margin: 4px 0;

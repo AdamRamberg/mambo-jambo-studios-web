@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { object } from 'prop-types';
+import { withTheme } from 'styled-components';
 
 import {
   HeaderWrapper,
@@ -11,9 +13,9 @@ import {
   LogoHamburgerContainer,
   StyledHamburger,
 } from './styles';
-import Image from '../../assets/images/mjs-logo-black-512x512.png';
+import Image from '../../assets/images/mjs-logo-200x200-allwhite.png';
 
-export default class Header extends Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,6 +33,7 @@ export default class Header extends Component {
 
   render() {
     const { isOpen } = this.state;
+    const { primary: hamburgerColor } = this.props.theme.colors.text;
     return (
       <HeaderWrapper>
         <InnerHeaderWrapper>
@@ -42,6 +45,7 @@ export default class Header extends Component {
               open={isOpen}
               onClick={this.toggleNav}
               animationType="elastic"
+              color={hamburgerColor}
             />
           </LogoHamburgerContainer>
           <Nav isOpen={isOpen}>
@@ -68,3 +72,9 @@ export default class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  theme: object,
+};
+
+export default withTheme(Header);

@@ -24,7 +24,7 @@ export default function SceneManager(canvas) {
 
   function buildScene() {
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color('#fafafa');
+    scene.background = new THREE.Color('#0a0a0a');
     return scene;
   }
 
@@ -56,7 +56,7 @@ export default function SceneManager(canvas) {
       farPlane,
     );
 
-    camera.position.z = 3;
+    camera.position.z = 7;
 
     return camera;
   }
@@ -71,7 +71,7 @@ export default function SceneManager(canvas) {
 
     mSceneSubjects.forEach(subject => subject.update(elapsedTime));
 
-    const radius = 3;
+    const radius = 7;
     const angle = (elapsedTime * CAMERA_ROT_SPEED * Math.PI) / 180;
     mCamera.position.set(Math.cos(angle) * radius, 0, Math.sin(angle) * radius);
     mCamera.lookAt(origin);

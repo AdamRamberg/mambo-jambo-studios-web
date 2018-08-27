@@ -15,7 +15,7 @@ export const Wrapper = styled.span`
 `;
 
 export const StyledText = styled(Text).attrs({
-  size: 'xxl',
+  size: 'large',
   tag: 'div',
   color: 'black',
 })`
@@ -26,4 +26,11 @@ export const StyledText = styled(Text).attrs({
   text-align: center;
   text-overflow: clip;
   white-space: nowrap;
+
+  ${media.mediumUp`
+    font-size: ${({ theme }) => `${theme?.fontSize['xl']} !important;`};
+  `};
+  ${media.largeUp`
+    font-size: ${({ theme }) => `${theme?.fontSize['xxl']} !important;`};
+  `};
 `;

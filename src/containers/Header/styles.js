@@ -67,6 +67,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  color: ${({ theme }) => theme?.colors?.text?.primary};
 `;
 
 export const LogoHamburgerContainer = styled.div`

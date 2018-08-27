@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Text from '../../components/Text';
+import { media } from '../../utils/mixins';
 
 const HEADER_HEIGHT = '64px';
 
@@ -17,15 +18,26 @@ export const FlexContainer = styled.div`
   height: 100%;
   display: flex;
   flex-flow: row wrap;
-  align-content: center;
-  padding: ${({ theme }) => `0 ${theme?.spacing?.medium}`};
+  align-content: flex-end;
+  padding: ${({ theme }) => `${theme?.spacing?.medium}`};
+
+  ${media.xLargeUp`
+    align-content: center;
+  `};
 `;
 
 export const StyledHeader = styled(Text).attrs({
-  size: 'xxl',
+  size: 'large',
   tag: 'h1',
 })`
   flex-basis: 100%;
   margin: 0;
   max-width: 100%;
+
+  ${media.mediumUp`
+    font-size: ${({ theme }) => `${theme?.fontSize['xl']} !important;`};
+  `};
+  ${media.largeUp`
+    font-size: ${({ theme }) => `${theme?.fontSize['xxl']} !important;`};
+  `};
 `;

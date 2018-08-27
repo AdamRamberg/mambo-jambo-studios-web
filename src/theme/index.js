@@ -2,11 +2,11 @@ import { fontSizeMajorSecond } from './fontSize';
 
 const theme = {
   colors: {
-    primary: '#fafafa',
-    secondary: '#fafafa',
-    accent: '#fafafa',
+    primary: '#0a0a0a',
+    secondary: '#0a0a0a',
+    accent: '#0a0a0a',
     text: {
-      primary: '#252942',
+      primary: '#f6f6f6',
     },
   },
   fontSize: fontSizeMajorSecond({ basePixelFontSize: 18 }),

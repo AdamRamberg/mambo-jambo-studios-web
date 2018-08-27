@@ -17,7 +17,13 @@ class Hamburger extends Component {
   }
 
   render() {
-    const { open, animationType, animationDuration, ...rest } = this.props;
+    const {
+      open,
+      animationType,
+      animationDuration,
+      color,
+      ...rest
+    } = this.props;
     const { hasOpenStateChanged } = this.state;
     return (
       <HamburgerBox {...rest}>
@@ -27,6 +33,7 @@ class Hamburger extends Component {
           hasOpenStateChanged={hasOpenStateChanged}
           open={open}
           index={0}
+          color={color}
         />
         <HamburgerBar
           animationType={animationType}
@@ -34,6 +41,7 @@ class Hamburger extends Component {
           hasOpenStateChanged={hasOpenStateChanged}
           open={open}
           index={1}
+          color={color}
         />
         <HamburgerBar
           animationType={animationType}
@@ -41,6 +49,7 @@ class Hamburger extends Component {
           hasOpenStateChanged={hasOpenStateChanged}
           open={open}
           index={2}
+          color={color}
         />
       </HamburgerBox>
     );
@@ -56,6 +65,7 @@ Hamburger.propTypes = {
   open: bool.isRequired,
   animationType: string,
   animationDuration: number,
+  color: string,
 };
 
 export default Hamburger;

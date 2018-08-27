@@ -15,7 +15,7 @@ const HomePage = () => (
   <Wrapper>
     <ThreeContainer />
     <FlexContainer>
-      <StyledHeader>I&apos;m Adam Ramberg</StyledHeader>
+      <StyledHeader>Howdy! I&apos;m Adam Ramberg</StyledHeader>
       <StyledHeader>
         I create&thinsp;
         <TextCarousel items={textCarouselItems} />
