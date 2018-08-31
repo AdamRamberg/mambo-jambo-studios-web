@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import '../../theme/globalStyles';
@@ -11,13 +10,11 @@ import Header from '../Header';
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <BrowserRouter>
-      <AppWrapper>
-        <Header />
-        <Helmet />
-        <Routes />
-      </AppWrapper>
-    </BrowserRouter>
+    <AppWrapper>
+      <Header />
+      <Helmet />
+      <Routes />
+    </AppWrapper>
   </ThemeProvider>
 );
 

@@ -141,9 +141,6 @@ export const HamburgerBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  &:hover > * {
-  }
 `;
 
 export const HamburgerBar = styled.span`

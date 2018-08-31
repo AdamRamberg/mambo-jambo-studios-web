@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { object } from 'prop-types';
 import { withTheme } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from '@reach/router';
 
 import {
   HeaderWrapper,

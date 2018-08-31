@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from '@reach/router';
 
 import { media } from '../../utils/mixins';
 import Hamburger from '../../components/Hamburger';

@@ -36,6 +36,11 @@ const plugins = [
 module.exports = options => ({
   mode: options.mode,
   entry: [path.join(process.cwd(), 'src/index.js')],
+  output: {
+    publicPath: '/',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
+  },
   module: {
     rules: [
       {

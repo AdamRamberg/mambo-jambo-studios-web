@@ -38,6 +38,7 @@ injectGlobal`
   }
   *, *:before, *:after {
     box-sizing: inherit;
+    color: ${theme?.colors?.text?.primary}
   }
 
   html,
@@ -46,7 +47,7 @@ injectGlobal`
     height: 100%;
     width: 100%;
 		margin: 0;
-    background-color: ${theme.colors.primary};
+    background-color: ${theme?.colors?.primary};
   }
 
   #root {
