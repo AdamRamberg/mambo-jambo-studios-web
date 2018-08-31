@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { BLACK } from '../../theme/colors';
 
 import { withDynamicTag } from '../../utils/withDynamicTag';
 
 const Text = styled.h1`
   color: ${({ color, theme }) =>
-    color || theme?.colors?.text?.primary || 'black'};
+    color || theme?.colors?.text?.primary || BLACK};
   background-color: ${({ backgroundColor }) =>
     backgroundColor || 'transparent'};
   font-size: ${({ size, theme }) =>

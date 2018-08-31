@@ -17,8 +17,9 @@ export const Wrapper = styled.span`
 export const StyledText = styled(Text).attrs({
   size: 'large',
   tag: 'div',
-  color: 'black',
 })`
+  border-radius: 24px;
+  ${({ color }) => color && `color: ${color};`}
   padding: ${({ visible }) => (visible ? '0 1rem' : '0')};
   transition: flex 0.2s ease-in-out;
   flex: ${({ visible }) => (visible ? '1' : '0')};
@@ -26,6 +27,8 @@ export const StyledText = styled(Text).attrs({
   text-align: center;
   text-overflow: clip;
   white-space: nowrap;
+  ${({ textShadowColor }) =>
+    textShadowColor && `text-shadow: 2px 2px ${textShadowColor};`}
 
   ${media.mediumUp`
     font-size: ${({ theme }) => `${theme?.fontSize['xl']} !important;`};

@@ -22,9 +22,14 @@ export const InnerHeaderWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
+  height: ${props => props?.theme?.header?.height || HEADER_HEIGHT};
   width: auto;
   padding: 8px;
+  transition: 0.1s linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const Nav = styled.nav`
@@ -68,6 +73,12 @@ export const StyledLink = styled(Link)`
   text-transform: uppercase;
   font-weight: bold;
   color: ${({ theme }) => theme?.colors?.text?.primary};
+  transition: 0.1s linear;
+  border-bottom: 5px solid transparent;
+
+  &:hover {
+    border-bottom: 5px solid ${props => props?.theme?.colors?.accent};
+  }
 `;
 
 export const LogoHamburgerContainer = styled.div`

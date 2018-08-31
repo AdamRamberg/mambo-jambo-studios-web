@@ -1,12 +1,14 @@
 import { fontSizeMajorSecond } from './fontSize';
+import { BLACK, WHITE, LOVE } from './colors';
 
 const theme = {
   colors: {
-    primary: '#0a0a0a',
-    secondary: '#0a0a0a',
-    accent: '#0a0a0a',
+    primary: BLACK,
+    secondary: BLACK,
+    accent: LOVE,
     text: {
-      primary: '#f6f6f6',
+      primary: WHITE,
+      secondary: BLACK,
     },
   },
   fontSize: fontSizeMajorSecond({ basePixelFontSize: 18 }),

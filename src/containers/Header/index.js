@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { object } from 'prop-types';
 import { withTheme } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import {
   HeaderWrapper,
@@ -38,9 +39,9 @@ class Header extends Component {
       <HeaderWrapper>
         <InnerHeaderWrapper>
           <LogoHamburgerContainer>
-            <StyledLink to="/">
+            <Link to="/">
               <Logo src={Image} />
-            </StyledLink>
+            </Link>
             <StyledHamburger
               open={isOpen}
               onClick={this.toggleNav}

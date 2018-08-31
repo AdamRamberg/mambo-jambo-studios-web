@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { string, number, arrayOf, shape } from 'prop-types';
 
 import { StyledText, Wrapper } from './styles';
 
@@ -29,27 +29,33 @@ export default class TextCarousel extends Component {
     const { items, width } = this.props;
     return (
       <Wrapper width={width}>
-        {items.map(({ text, id, backgroundColor }, index) => (
-          <StyledText
-            key={id}
-            visible={index === activeId}
-            backgroundColor={backgroundColor}
-          >
-            {text}
-          </StyledText>
-        ))}
+        {items.map(
+          ({ text, id, backgroundColor, color, textShadowColor }, index) => (
+            <StyledText
+              key={id}
+              visible={index === activeId}
+              backgroundColor={backgroundColor}
+              color={color}
+              textShadowColor={textShadowColor}
+            >
+              {text}
+            </StyledText>
+          ),
+        )}
       </Wrapper>
     );
   }
 }
 
 TextCarousel.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-      backgroundColor: PropTypes.string,
+  items: arrayOf(
+    shape({
+      text: string.isRequired,
+      id: number.isRequired,
+      backgroundColor: string,
+      color: string,
+      textShadowColor: string,
     }),
   ).isRequired,
-  width: PropTypes.string,
+  width: string,
 };
