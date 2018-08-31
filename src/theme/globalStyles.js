@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components';
+import styledSanitize from 'styled-sanitize';
 
 import theme from './index';
 
@@ -9,6 +10,8 @@ import PTSansBoldItalic from '../assets/fonts/PT_Sans/PT_Sans-Web-BoldItalic.ttf
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+  ${styledSanitize}
+
   @font-face {
     font-family: 'PT Sans', sans-serif;
     src: url('${PTSansRegular}') format('truetype');

@@ -5586,6 +5586,10 @@ styled-components@^3.3.3:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
+styled-sanitize@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/styled-sanitize/-/styled-sanitize-1.1.1.tgz#96ff8eae43126ba8d205d0300eac3e7113352f5d"
+
 stylis-rule-sheet@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"

@@ -8,7 +8,7 @@ const HEADER_HEIGHT = '64px';
 
 export const HeaderWrapper = styled.header`
   position: sticky;
-  height: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
+  height: ${props => props?.theme?.height || HEADER_HEIGHT};
   width: 100%;
 `;
 
