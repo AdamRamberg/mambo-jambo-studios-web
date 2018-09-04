@@ -22,6 +22,10 @@ export default function SceneManager(canvas) {
   const mCamera = buildCamera(screenDimensions);
   const mSceneSubjects = createSceneSubjects(mScene);
 
+  function getCameraRadius(canvasWidth) {
+    return canvasWidth < 480 ? 9 : 7;
+  }
+
   function buildScene() {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color('#0a0a0a');
@@ -56,7 +60,7 @@ export default function SceneManager(canvas) {
       farPlane,
     );
 
-    camera.position.z = 7;
+    camera.position.z = getCameraRadius(width);
 
     return camera;
   }
@@ -71,7 +75,7 @@ export default function SceneManager(canvas) {
 
     mSceneSubjects.forEach(subject => subject.update(elapsedTime));
 
-    const radius = 7;
+    const radius = getCameraRadius(screenDimensions.width);
     const angle = (elapsedTime * CAMERA_ROT_SPEED * Math.PI) / 180;
     mCamera.position.set(Math.cos(angle) * radius, 0, Math.sin(angle) * radius);
     mCamera.lookAt(origin);
