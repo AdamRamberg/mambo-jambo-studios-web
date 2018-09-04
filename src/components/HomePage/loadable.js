@@ -1,6 +1,6 @@
 import Loadable from 'react-loadable';
 
-import LoadableIndicator from '../../components/LoadingIndicator';
+import LoadableIndicator from '../LoadingIndicator';
 
 export default Loadable({
   loader: () => import('./index'),

@@ -3,7 +3,7 @@ import { Link } from '@reach/router';
 
 import { media } from '../../utils/mixins';
 import { LOVE, BRIGHTER_LOVE } from '../../theme/colors';
-import Hamburger from '../../components/Hamburger';
+import Hamburger from '../Hamburger';
 
 const HEADER_HEIGHT = '64px';
 

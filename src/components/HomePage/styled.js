@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Text from '../../components/Text';
+import Text from '../Text';
 import { media } from '../../utils/mixins';
 
 const HEADER_HEIGHT = '64px';

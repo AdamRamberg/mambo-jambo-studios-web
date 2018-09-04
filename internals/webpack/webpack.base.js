@@ -53,7 +53,7 @@ module.exports = options => ({
         ],
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        test: /\.(eot|ttf|woff|woff2|otf)$/,
         use: [
           {
             loader: 'file-loader',
@@ -69,6 +69,10 @@ module.exports = options => ({
             options: {},
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
       },
     ],
   },

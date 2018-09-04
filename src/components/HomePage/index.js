@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { FlexContainer, StyledHeader, Wrapper } from './styled';
-import TextCarousel from '../TextCarousel';
-import ThreeContainer from '../ThreeContainer';
+import TextCarousel from '../../containers/TextCarousel';
+import ThreeContainer from '../../containers/ThreeContainer';
 import { WHITE, LOVE, PURPLE, BLOOD_ORANGE, SUNSET } from '../../theme/colors';
 
 const textShadowColor = 'rgba(0,0,0,0.1)';
