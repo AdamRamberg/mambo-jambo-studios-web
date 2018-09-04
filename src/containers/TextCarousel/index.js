@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { string, number, arrayOf, shape } from 'prop-types';
 
-import { StyledText, Wrapper } from './styles';
+import { StyledText, Wrapper } from './styled';
 
 export default class TextCarousel extends Component {
   constructor(props) {

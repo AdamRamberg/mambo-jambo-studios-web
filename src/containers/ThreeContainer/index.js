@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Container } from './styles';
+import { Container } from './styled';
 import threeEntryPoint from './threejs';
 
 export default class ThreeContainer extends Component {

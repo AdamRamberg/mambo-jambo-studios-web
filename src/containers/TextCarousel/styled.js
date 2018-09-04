@@ -18,7 +18,6 @@ export const StyledText = styled(Text).attrs({
   size: 'large',
   tag: 'div',
 })`
-  border-radius: 24px;
   ${({ color }) => color && `color: ${color};`}
   padding: ${({ visible }) => (visible ? '0 1rem' : '0')};
   transition: flex 0.2s ease-in-out;

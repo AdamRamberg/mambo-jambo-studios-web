@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import '../../theme/globalStyles';
 import theme from '../../theme';
-import { AppWrapper } from './styles';
+import { AppWrapper } from './styled';
 import { Helmet } from './helmet';
 import { Routes } from './routes';
 import Header from '../Header';

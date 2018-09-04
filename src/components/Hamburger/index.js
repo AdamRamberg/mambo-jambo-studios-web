@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bool, string, number } from 'prop-types';
 
-import { HamburgerBox, HamburgerBar } from './styles';
+import { HamburgerBox, HamburgerBar } from './styled';
 
 class Hamburger extends Component {
   state = {

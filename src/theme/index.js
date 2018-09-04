@@ -4,7 +4,7 @@ import { BLACK, WHITE, LOVE } from './colors';
 const theme = {
   colors: {
     primary: BLACK,
-    secondary: BLACK,
+    secondary: WHITE,
     accent: LOVE,
     text: {
       primary: WHITE,
@@ -15,7 +15,8 @@ const theme = {
   spacing: {
     small: '0.5rem',
     medium: '1rem',
-    large: '2rem',
+    large: '1.5rem',
+    xl: '2rem',
   },
   header: {
     height: '64px',

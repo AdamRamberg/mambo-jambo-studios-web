@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FlexContainer, StyledHeader, Wrapper } from './styles';
+import { FlexContainer, StyledHeader, Wrapper } from './styled';
 import TextCarousel from '../TextCarousel';
 import ThreeContainer from '../ThreeContainer';
 import { WHITE, LOVE, PURPLE, BLOOD_ORANGE, SUNSET } from '../../theme/colors';
