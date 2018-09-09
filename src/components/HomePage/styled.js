@@ -7,8 +7,7 @@ const HEADER_HEIGHT = '64px';
 
 export const Wrapper = styled.div`
   position: relative;
-  height: ${props =>
-    `calc(100vh - ${props?.theme?.height?.height || HEADER_HEIGHT})`};
+  height: ${({ theme }) => `calc(100vh - ${theme?.height || HEADER_HEIGHT})`};
   width: 100%;
 `;
 

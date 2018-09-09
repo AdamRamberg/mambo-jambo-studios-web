@@ -7,8 +7,7 @@ import { withDynamicTag } from '../../utils/withDynamicTag';
 const Text = styled.h1`
   color: ${({ color, theme }) =>
     color || theme?.colors?.text?.primary || BLACK};
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor || 'transparent'};
+  background: ${({ backgroundColor }) => backgroundColor || 'transparent'};
   font-size: ${({ size, theme }) =>
     theme?.fontSize[size] || theme?.fontSize?.default || '1rem'};
 `;

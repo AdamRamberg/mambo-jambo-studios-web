@@ -4,14 +4,8 @@ import Text from '../../components/Text';
 import { media } from '../../utils/mixins';
 
 export const Wrapper = styled.span`
-  display: flex;
-  width: 100%;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-
-  ${media.xSmallUp`
-    display: inline-flex;
-    width: ${({ width }) => width || '320px'};
-  `};
+  display: inline-block;
+  position: absolute;
 `;
 
 export const StyledText = styled(Text).attrs({
@@ -19,13 +13,16 @@ export const StyledText = styled(Text).attrs({
   tag: 'div',
 })`
   ${({ color }) => color && `color: ${color};`}
-  padding: ${({ visible }) => (visible ? '0 1rem' : '0')};
-  transition: flex 0.2s ease-in-out;
-  flex: ${({ visible }) => (visible ? '1' : '0')};
-  overflow: hidden;
-  text-align: center;
-  text-overflow: clip;
-  white-space: nowrap;
+  position: absolute;
+  width: 320px;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: ${({ visible }) => (visible ? '1;' : `0;`)}
+  padding: 0 0.3rem;
+  transition: all 0.3s ease-in-out;
   ${({ textShadowColor }) =>
     textShadowColor && `text-shadow: 2px 2px ${textShadowColor};`}
 

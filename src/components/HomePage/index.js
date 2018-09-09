@@ -3,7 +3,8 @@ import React from 'react';
 import { FlexContainer, StyledHeader, Wrapper } from './styled';
 import TextCarousel from '../../containers/TextCarousel';
 import ThreeContainer from '../../containers/ThreeContainer';
-import { WHITE, LOVE, PURPLE, BLOOD_ORANGE, SUNSET } from '../../theme/colors';
+import { LOVE, PURPLE, BLOOD_ORANGE, SUNSET } from '../../theme/colors';
+import SocialLinks from '../SocialLinks';
 
 const textShadowColor = 'rgba(0,0,0,0.1)';
 
@@ -11,29 +12,25 @@ const textCarouselItems = [
   {
     text: 'web apps',
     id: 0,
-    backgroundColor: LOVE,
-    color: WHITE,
+    color: LOVE,
     textShadowColor,
   },
   {
     text: 'games',
     id: 1,
-    backgroundColor: PURPLE,
-    color: WHITE,
+    color: PURPLE,
     textShadowColor,
   },
   {
     text: 'AR apps',
     id: 2,
-    backgroundColor: BLOOD_ORANGE,
-    color: WHITE,
+    color: BLOOD_ORANGE,
     textShadowColor,
   },
   {
     text: 'VR experiences',
     id: 3,
-    backgroundColor: SUNSET,
-    color: WHITE,
+    color: SUNSET,
     textShadowColor,
   },
 ];
@@ -47,6 +44,7 @@ const HomePage = () => (
         I create&thinsp;
         <TextCarousel items={textCarouselItems} />
       </StyledHeader>
+      <SocialLinks />
     </FlexContainer>
   </Wrapper>
 );

@@ -2,23 +2,28 @@ import styled from 'styled-components';
 import { Link } from '@reach/router';
 
 import { media } from '../../utils/mixins';
-import { LOVE, BRIGHTER_LOVE } from '../../theme/colors';
 import Hamburger from '../Hamburger';
 
 const HEADER_HEIGHT = '64px';
 
+const linearGradient = ({ theme }) =>
+  `linear-gradient(to left, ${theme?.colors?.accent}, ${
+    theme?.colors?.brightAccent
+  } 50%, ${theme?.colors?.accent})`;
+
 export const HeaderWrapper = styled.header`
   position: relative;
-  height: ${props => props?.theme?.height || HEADER_HEIGHT};
+  height: ${({ theme }) => theme?.header?.height || HEADER_HEIGHT};
   width: 100%;
 
   ${media.mediumUp`
     display: flex;
+    overflow: hidden;
   `};
 `;
 
 export const Logo = styled.img`
-  height: ${props => props?.theme?.header?.height || HEADER_HEIGHT};
+  height: ${({ theme }) => theme?.header?.height || HEADER_HEIGHT};
   width: auto;
   padding: 8px;
   transition: 0.1s linear;
@@ -33,7 +38,7 @@ export const Nav = styled.nav`
   z-index: 10;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(to left, ${LOVE}, ${BRIGHTER_LOVE} 50%, ${LOVE});
+  background: ${linearGradient};
   top: 0;
   width: calc(100vw - ${HEADER_HEIGHT});
   right: ${HEADER_HEIGHT};
@@ -96,7 +101,7 @@ export const StyledLink = styled(Link)`
   border-bottom: 5px solid transparent;
 
   &:hover {
-    border-bottom: 5px solid ${props => props?.theme?.colors?.accent};
+    border-bottom: 5px solid ${({ theme }) => theme?.colors?.accent};
   }
 `;
 
