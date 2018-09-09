@@ -1,9 +1,17 @@
 import { fontSizeMajorSecond } from './fontSize';
-import { BLACK, WHITE, LOVE, BRIGHTER_LOVE, PURPLE } from './colors';
+import {
+  BLACK,
+  TRANSPARENT_BLACK,
+  WHITE,
+  LOVE,
+  BRIGHTER_LOVE,
+  PURPLE,
+} from './colors';
 
 const theme = {
   colors: {
     primary: BLACK,
+    transparentPrimary: TRANSPARENT_BLACK,
     secondary: WHITE,
     accent: LOVE,
     brightAccent: BRIGHTER_LOVE,

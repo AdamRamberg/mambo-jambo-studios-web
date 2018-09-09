@@ -38,15 +38,14 @@ export const Nav = styled.nav`
   z-index: 10;
   height: 100vh;
   overflow: hidden;
-  background: ${linearGradient};
+  background: ${({ theme }) => theme?.colors?.transparentPrimary};
   top: 0;
   width: calc(100vw - ${HEADER_HEIGHT});
-  right: ${HEADER_HEIGHT};
   right: ${({ isOpen }) => (isOpen ? HEADER_HEIGHT : 'calc(100vw)')};
   transition: 0.1s linear;
 
   ${media.mediumUp`
-  transition: 0;
+    transition: 0;
     width: 100%;
     height: auto;
     right: 0;

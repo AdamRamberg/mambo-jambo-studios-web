@@ -4,7 +4,7 @@ import Logo from './Logo';
 
 const CAMERA_ROT_SPEED = 15;
 
-export default function SceneManager(canvas) {
+export default function SceneManager(canvas, options) {
   if (!(this instanceof SceneManager)) {
     throw new Error('Constructor needs to be called using the "new" keyword.');
   }
@@ -28,7 +28,9 @@ export default function SceneManager(canvas) {
 
   function buildScene() {
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color('#0a0a0a');
+    scene.background = new THREE.Color(
+      options.sceneBackgroundColor || '#0a0a0a',
+    );
     return scene;
   }
 

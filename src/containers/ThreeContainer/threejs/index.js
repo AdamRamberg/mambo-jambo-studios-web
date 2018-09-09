@@ -1,8 +1,8 @@
 import SceneManager from './SceneManager';
 
-export default function threeEntryPoint(container) {
+export default function threeEntryPoint(container, options) {
   const canvas = createCanvas(container);
-  const sceneManager = new SceneManager(canvas);
+  const sceneManager = new SceneManager(canvas, options);
 
   bindEventListeners(sceneManager, canvas, resizeCanvas);
   render(sceneManager);

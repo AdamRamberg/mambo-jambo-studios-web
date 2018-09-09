@@ -1,5 +1,7 @@
-export const BLACK = '#0a0a0a';
-export const WHITE = '#f6f6f6';
+export const BLACK = '#161616';
+export const REAL_BLACK = '#0c0c0c';
+export const TRANSPARENT_BLACK = 'rgba(0, 0, 0, 0.5)';
+export const WHITE = '#ececec';
 export const LOVE = '#cc2b5e';
 export const BRIGHTER_LOVE = '#e9306b';
 export const PURPLE = '#753a88';
