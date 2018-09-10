@@ -8,6 +8,8 @@ import {
   PURPLE,
 } from './colors';
 
+const HEADER_HEIGHT = '64px';
+
 const theme = {
   colors: {
     primary: BLACK,
@@ -29,7 +31,7 @@ const theme = {
     xl: '2rem',
   },
   header: {
-    height: '64px',
+    height: HEADER_HEIGHT,
   },
 };
 

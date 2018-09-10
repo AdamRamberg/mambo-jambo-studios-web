@@ -48,6 +48,7 @@ injectGlobal`
     width: 100%;
 		margin: 0;
     background-color: ${theme?.colors?.primary};
+    color: ${theme?.colors?.text?.primary};
   }
 
   #root {

@@ -4,11 +4,9 @@ import Text from '../Text';
 import { media } from '../../utils/mixins';
 import SocialLinks from '../SocialLinks';
 
-const HEADER_HEIGHT = '64px';
-
 export const Wrapper = styled.div`
   position: relative;
-  height: ${({ theme }) => `calc(100vh - ${theme?.height || HEADER_HEIGHT})`};
+  height: ${({ theme }) => `calc(100vh - ${theme?.header?.height})`};
   width: 100%;
 `;
 

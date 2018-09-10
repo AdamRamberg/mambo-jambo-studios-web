@@ -10,6 +10,7 @@ const Text = styled.h1`
   background: ${({ backgroundColor }) => backgroundColor || 'transparent'};
   font-size: ${({ size, theme }) =>
     theme?.fontSize[size] || theme?.fontSize?.default || '1rem'};
+  line-height: 1.2;
 `;
 
 Text.propTypes = {

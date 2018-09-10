@@ -3,6 +3,7 @@ import { Link } from '@reach/router';
 
 import { media } from '../../utils/mixins';
 import Hamburger from '../Hamburger';
+import SocialLinks from '../../components/SocialLinks';
 
 const HEADER_HEIGHT = '64px';
 
@@ -114,6 +115,17 @@ export const StyledHamburger = styled(Hamburger)`
   width: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
   z-index: 20;
   position: relative;
+
+  ${media.mediumUp`
+    display: none;
+  `};
+`;
+
+export const StyledSocialLinks = styled(SocialLinks)`
+  display: block;
+  position: absolute;
+  bottom: ${({ theme }) => theme?.spacing?.medium};
+  right: ${({ theme }) => theme?.spacing?.xl};
 
   ${media.mediumUp`
     display: none;

@@ -12,6 +12,7 @@ import {
   StyledLink,
   LogoHamburgerContainer,
   StyledHamburger,
+  StyledSocialLinks,
 } from './styled';
 import Image from '../../assets/images/mjs-logo-200x200-allwhite.png';
 
@@ -62,6 +63,7 @@ class Header extends Component {
               </StyledLink>
             </ListItem>
           </List>
+          <StyledSocialLinks />
         </Nav>
       </HeaderWrapper>
     );
