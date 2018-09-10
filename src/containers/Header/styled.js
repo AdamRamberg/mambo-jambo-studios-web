@@ -6,11 +6,6 @@ import Hamburger from '../Hamburger';
 
 const HEADER_HEIGHT = '64px';
 
-const linearGradient = ({ theme }) =>
-  `linear-gradient(to left, ${theme?.colors?.accent}, ${
-    theme?.colors?.brightAccent
-  } 50%, ${theme?.colors?.accent})`;
-
 export const HeaderWrapper = styled.header`
   position: relative;
   height: ${({ theme }) => theme?.header?.height || HEADER_HEIGHT};
@@ -40,8 +35,8 @@ export const Nav = styled.nav`
   overflow: hidden;
   background: ${({ theme }) => theme?.colors?.transparentPrimary};
   top: 0;
-  width: calc(100vw - ${HEADER_HEIGHT});
-  right: ${({ isOpen }) => (isOpen ? HEADER_HEIGHT : 'calc(100vw)')};
+  width: 100vw;
+  right: ${({ isOpen }) => (isOpen ? 0 : 'calc(100vw)')};
   transition: 0.1s linear;
 
   ${media.mediumUp`
@@ -117,6 +112,8 @@ export const LogoHamburgerContainer = styled.div`
 export const StyledHamburger = styled(Hamburger)`
   height: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
   width: ${props => props?.theme?.theme?.height || HEADER_HEIGHT};
+  z-index: 20;
+  position: relative;
 
   ${media.mediumUp`
     display: none;

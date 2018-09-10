@@ -1,6 +1,6 @@
 export const BLACK = '#161616';
 export const REAL_BLACK = '#0c0c0c';
-export const TRANSPARENT_BLACK = 'rgba(0, 0, 0, 0.5)';
+export const TRANSPARENT_BLACK = 'rgba(0, 0, 0, 0.6)';
 export const WHITE = '#ececec';
 export const LOVE = '#cc2b5e';
 export const BRIGHTER_LOVE = '#e9306b';

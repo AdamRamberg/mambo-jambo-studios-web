@@ -7,8 +7,8 @@ import './icons/gmail.svg';
 import './icons/linkedin.svg';
 import { PURPLE, BLOOD_ORANGE, LOVE } from '../../theme/colors';
 
-const SocialLinks = () => (
-  <Wrapper>
+const SocialLinks = ({ ...rest }) => (
+  <Wrapper {...rest}>
     <Link
       target="_blank"
       href="https://github.com/AdamRamberg"

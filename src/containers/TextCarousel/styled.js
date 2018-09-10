@@ -5,7 +5,11 @@ import { media } from '../../utils/mixins';
 
 export const Wrapper = styled.span`
   display: inline-block;
-  position: absolute;
+  width: 220px;
+
+  ${media.xSmallUp`
+    width: 320px;
+  `};
 `;
 
 export const StyledText = styled(Text).attrs({
@@ -13,16 +17,10 @@ export const StyledText = styled(Text).attrs({
   tag: 'div',
 })`
   ${({ color }) => color && `color: ${color};`}
-  position: absolute;
-  width: 320px;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: ${({ visible }) => (visible ? '1;' : `0;`)}
-  padding: 0 0.3rem;
-  transition: all 0.3s ease-in-out;
+  border: 5px solid ${({ color }) => color}
+  padding: 0 1rem;
+  text-align: center;
+  transition: all 1s ease-in-out;
   ${({ textShadowColor }) =>
     textShadowColor && `text-shadow: 2px 2px ${textShadowColor};`}
 

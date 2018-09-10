@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Text from '../Text';
 import { media } from '../../utils/mixins';
+import SocialLinks from '../SocialLinks';
 
 const HEADER_HEIGHT = '64px';
 
@@ -38,5 +39,16 @@ export const StyledHeader = styled(Text).attrs({
   `};
   ${media.largeUp`
     font-size: ${({ theme }) => `${theme?.fontSize['xxl']} !important;`};
+  `};
+`;
+
+export const StyledSocialLinks = styled(SocialLinks)`
+  display: none;
+  position: absolute;
+  right: ${({ theme }) => theme?.spacing?.medium};
+  bottom: ${({ theme }) => theme?.spacing?.medium};
+
+  ${media.mediumUp`
+    display: block;
   `};
 `;
