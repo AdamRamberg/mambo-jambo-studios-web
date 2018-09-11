@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ErrorPage from '../ErrorPage';
+import Button from '../Button';
+
 const LoadingIndicator = ({ error, pastDelay, retry }) => {
   if (error) {
     return (
-      <div>
-        Error!
-        <button type="button" onClick={retry}>
-          Retry
-        </button>
-      </div>
+      <ErrorPage>
+        <Button onClick={retry}>Retry</Button>
+      </ErrorPage>
     );
   }
   if (pastDelay) {

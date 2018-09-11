@@ -1,5 +1,7 @@
 import React from 'react';
 
-const BlogPage = () => <div>Blog</div>;
+import { Wrapper } from './styled';
+
+const BlogPage = () => <Wrapper>Blog</Wrapper>;
 
 export default BlogPage;

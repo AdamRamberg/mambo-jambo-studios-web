@@ -11,11 +11,15 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: ${({ theme }) => `${theme?.spacing?.medium}`};
+
+  & > span {
+    font-size: ${({ theme }) => `${theme?.fontSize['large']}`};
+  }
 `;
 
 export const BreadText = styled(Text).attrs({
   size: 'medium',
-  tag: 'span',
+  tag: 'p',
 })``;
 
 export const Image = styled.img`

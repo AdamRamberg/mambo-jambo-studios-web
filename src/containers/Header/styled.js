@@ -22,7 +22,7 @@ export const Logo = styled.img`
   height: ${({ theme }) => theme?.header?.height || HEADER_HEIGHT};
   width: auto;
   padding: 8px;
-  transition: 0.1s linear;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.1);
@@ -92,7 +92,7 @@ export const StyledLink = styled(Link)`
   text-transform: uppercase;
   font-weight: bold;
   color: ${({ theme }) => theme?.colors?.text?.primary};
-  transition: 0.1s linear;
+  transition: all 0.2s ease-in-out;
   border-bottom: 5px solid transparent;
 
   &:hover {

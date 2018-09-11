@@ -1,5 +1,7 @@
 import React from 'react';
 
-const PortfolioPage = () => <div>Portfolio</div>;
+import { Wrapper } from './styled';
+
+const PortfolioPage = () => <Wrapper>Portfolio</Wrapper>;
 
 export default PortfolioPage;
