@@ -6,17 +6,17 @@ import { Wrapper, Heading } from './styled';
 const ErrorPage = ({ children }) => (
   <Wrapper>
     <Heading>
-      Whoops! An unexpected error occurred...
       <span role="img" aria-label="poop">
         💩
       </span>
+      &nbsp; Whoops! An unexpected error occurred...
     </Heading>
     {children}
   </Wrapper>
 );
 
 ErrorPage.propTypes = {
-  children: node.isRequired,
+  children: node,
 };
 
 export default ErrorPage;

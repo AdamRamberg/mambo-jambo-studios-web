@@ -58,7 +58,12 @@ class Header extends Component {
               </StyledLink>
             </ListItem>
             <ListItem>
-              <StyledLink onClick={this.closeNav} to="/blog">
+              <StyledLink
+                tag="a"
+                onClick={this.closeNav}
+                target="_blank"
+                href="https://medium.com/@adamramberg/"
+              >
                 Blog
               </StyledLink>
             </ListItem>

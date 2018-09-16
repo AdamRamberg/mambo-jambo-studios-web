@@ -3,6 +3,7 @@ import { Link } from '@reach/router';
 
 import Hamburger from '../Hamburger';
 import SocialLinks from '../../components/SocialLinks';
+import { withDynamicTag } from '../../utils/withDynamicTag';
 
 const HEADER_HEIGHT = '64px';
 
@@ -85,7 +86,7 @@ export const ListItem = styled.li`
   `};
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = withDynamicTag(styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -96,7 +97,7 @@ export const StyledLink = styled(Link)`
   &:hover {
     border-bottom: 5px solid ${({ theme }) => theme?.colors?.accent};
   }
-`;
+`);
 
 export const LogoHamburgerContainer = styled.div`
   display: flex;

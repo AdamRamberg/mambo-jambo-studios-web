@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from '@reach/router';
 
-export const StyledButton = styled.button`
+const styling = css`
   padding: ${({ theme }) => `${theme?.spacing?.sm} ${theme?.spacing?.m}`};
   text-align: center;
   border: 5px solid
@@ -13,6 +14,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   outline: none;
   text-transform: uppercase;
+  text-decoration: none;
 
   &:hover {
     background-color: ${({ secondaryColor, theme }) =>
@@ -21,4 +23,12 @@ export const StyledButton = styled.button`
       primaryColor || theme?.colors?.primary || 'white'};
     transform: scale(1.1);
   }
+`;
+
+export const StyledButton = styled.button`
+  ${styling};
+`;
+
+export const StyledLink = styled(Link)`
+  ${styling};
 `;
