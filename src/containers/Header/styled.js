@@ -55,7 +55,7 @@ export const Nav = styled.nav`
 
 export const List = styled.ul`
   list-style: none;
-  margin: ${({ theme }) => theme?.spacing?.medium};
+  margin: ${({ theme }) => theme?.spacing?.m};
   padding: 0;
   height: 100%;
   display: flex;
@@ -72,8 +72,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  padding: ${({ theme }) =>
-    `${theme?.spacing?.medium} ${theme?.spacing?.large} `};
+  padding: ${({ theme }) => `${theme?.spacing?.m} ${theme?.spacing?.l} `};
   width: 100%;
   text-align: right;
   font-size: ${({ theme }) => `${theme?.fontSize['large']};`};
@@ -81,7 +80,7 @@ export const ListItem = styled.li`
   ${({ theme }) => theme.media.mediumUp`
     font-size: ${theme?.fontSize['default']};
     text-align: center;
-    padding: 0 ${theme?.spacing?.medium}
+    padding: 0 ${theme?.spacing?.m}
     width: auto;
   `};
 `;
@@ -123,7 +122,7 @@ export const StyledHamburger = styled(Hamburger)`
 export const StyledSocialLinks = styled(SocialLinks)`
   display: block;
   position: absolute;
-  bottom: ${({ theme }) => theme?.spacing?.medium};
+  bottom: ${({ theme }) => theme?.spacing?.m};
   right: ${({ theme }) => theme?.spacing?.xl};
 
   ${({ theme }) => theme.media.mediumUp`

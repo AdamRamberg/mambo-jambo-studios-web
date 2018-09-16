@@ -26,9 +26,10 @@ const theme = {
   },
   fontSize: fontSizeMajorSecond({ basePixelFontSize: 18 }),
   spacing: {
-    small: '0.5rem',
-    medium: '1rem',
-    large: '1.5rem',
+    xs: '0.25rem',
+    sm: '0.5rem',
+    m: '1rem',
+    l: '1.5rem',
     xl: '2rem',
   },
   header: {

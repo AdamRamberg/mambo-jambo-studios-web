@@ -16,7 +16,7 @@ export const FlexContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   align-content: flex-end;
-  padding: ${({ theme }) => `${theme?.spacing?.medium}`};
+  padding: ${({ theme }) => `${theme?.spacing?.m}`};
 
   ${({ theme }) => theme.media.xLargeUp`
     align-content: center;
@@ -26,6 +26,7 @@ export const FlexContainer = styled.div`
 export const StyledHeader = styled(Text).attrs({
   size: 'large',
   tag: 'h1',
+  fontWeight: 'bold',
 })`
   flex-basis: 100%;
   margin: 0;
@@ -42,8 +43,8 @@ export const StyledHeader = styled(Text).attrs({
 export const StyledSocialLinks = styled(SocialLinks)`
   display: none;
   position: absolute;
-  right: ${({ theme }) => theme?.spacing?.medium};
-  bottom: ${({ theme }) => theme?.spacing?.medium};
+  right: ${({ theme }) => theme?.spacing?.m};
+  bottom: ${({ theme }) => theme?.spacing?.m};
 
   ${({ theme }) => theme.media.mediumUp`
     display: block;

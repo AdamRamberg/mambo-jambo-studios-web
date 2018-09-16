@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  padding: ${({ theme }) =>
-    `${theme?.spacing?.small} ${theme?.spacing?.medium}`};
+  padding: ${({ theme }) => `${theme?.spacing?.sm} ${theme?.spacing?.m}`};
   text-align: center;
   border: 5px solid
     ${({ secondaryColor, theme }) =>
