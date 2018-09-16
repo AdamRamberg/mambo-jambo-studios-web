@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import Text from '../Text';
-import { media } from '../../utils/mixins';
 import SocialLinks from '../SocialLinks';
 
 export const Wrapper = styled.div`
@@ -19,7 +18,7 @@ export const FlexContainer = styled.div`
   align-content: flex-end;
   padding: ${({ theme }) => `${theme?.spacing?.medium}`};
 
-  ${media.xLargeUp`
+  ${({ theme }) => theme.media.xLargeUp`
     align-content: center;
   `};
 `;
@@ -32,11 +31,11 @@ export const StyledHeader = styled(Text).attrs({
   margin: 0;
   max-width: 100%;
 
-  ${media.mediumUp`
-    font-size: ${({ theme }) => `${theme?.fontSize['xl']} !important;`};
+  ${({ theme }) => theme.media.mediumUp`
+    font-size: ${theme?.fontSize['xl']} !important;
   `};
-  ${media.largeUp`
-    font-size: ${({ theme }) => `${theme?.fontSize['xxl']} !important;`};
+  ${({ theme }) => theme.media.largeUp`
+    font-size: ${theme?.fontSize['xxl']} !important;
   `};
 `;
 
@@ -46,7 +45,7 @@ export const StyledSocialLinks = styled(SocialLinks)`
   right: ${({ theme }) => theme?.spacing?.medium};
   bottom: ${({ theme }) => theme?.spacing?.medium};
 
-  ${media.mediumUp`
+  ${({ theme }) => theme.media.mediumUp`
     display: block;
   `};
 `;

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Link } from '@reach/router';
 
-import { media } from '../../utils/mixins';
 import Hamburger from '../Hamburger';
 import SocialLinks from '../../components/SocialLinks';
 
@@ -12,7 +11,7 @@ export const HeaderWrapper = styled.header`
   height: ${({ theme }) => theme?.header?.height || HEADER_HEIGHT};
   width: 100%;
 
-  ${media.mediumUp`
+  ${({ theme }) => theme.media.mediumUp`
     display: flex;
     overflow: hidden;
   `};
@@ -40,7 +39,7 @@ export const Nav = styled.nav`
   right: ${({ isOpen }) => (isOpen ? 0 : 'calc(100vw)')};
   transition: 0.1s linear;
 
-  ${media.mediumUp`
+  ${({ theme }) => theme.media.mediumUp`
     transition: 0;
     width: 100%;
     height: auto;
@@ -64,7 +63,7 @@ export const List = styled.ul`
   align-items: center;
   justify-content: center;
 
-  ${media.mediumUp`
+  ${({ theme }) => theme.media.mediumUp`
     margin: 0;
     flex-direction: row;
     justify-content: flex-end;
@@ -79,10 +78,10 @@ export const ListItem = styled.li`
   text-align: right;
   font-size: ${({ theme }) => `${theme?.fontSize['large']};`};
 
-  ${media.mediumUp`
-    font-size: ${({ theme }) => `${theme?.fontSize['default']};`};
+  ${({ theme }) => theme.media.mediumUp`
+    font-size: ${theme?.fontSize['default']};
     text-align: center;
-    padding: ${({ theme }) => `0 ${theme?.spacing?.medium}`};
+    padding: 0 ${theme?.spacing?.medium}
     width: auto;
   `};
 `;
@@ -105,7 +104,7 @@ export const LogoHamburgerContainer = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  ${media.mediumUp`
+  ${({ theme }) => theme.media.mediumUp`
       width: auto;
   `};
 `;
@@ -116,7 +115,7 @@ export const StyledHamburger = styled(Hamburger)`
   z-index: 20;
   position: relative;
 
-  ${media.mediumUp`
+  ${({ theme }) => theme.media.mediumUp`
     display: none;
   `};
 `;
@@ -127,7 +126,7 @@ export const StyledSocialLinks = styled(SocialLinks)`
   bottom: ${({ theme }) => theme?.spacing?.medium};
   right: ${({ theme }) => theme?.spacing?.xl};
 
-  ${media.mediumUp`
+  ${({ theme }) => theme.media.mediumUp`
     display: none;
   `};
 `;

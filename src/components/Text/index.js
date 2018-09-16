@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { BLACK } from '../../theme/colors';
 
+import { BLACK } from '../../theme/colors';
 import { withDynamicTag } from '../../utils/withDynamicTag';
 
 const Text = styled.h1`
@@ -11,6 +11,10 @@ const Text = styled.h1`
   font-size: ${({ size, theme }) =>
     theme?.fontSize[size] || theme?.fontSize?.default || '1rem'};
   line-height: 1.2;
+
+  ${({ theme, size }) => theme.media.smallUp`
+    font-size: ${theme?.fontSize[size] || theme?.fontSize?.default || '1rem'};
+  `};
 `;
 
 Text.propTypes = {

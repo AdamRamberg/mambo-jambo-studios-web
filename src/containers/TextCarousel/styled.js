@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 import Text from '../../components/Text';
-import { media } from '../../utils/mixins';
 
 export const Wrapper = styled.span`
   display: inline-block;
   width: 220px;
 
-  ${media.xSmallUp`
+  ${({ theme }) => theme.media.xSmallUp`
     width: 320px;
   `};
 `;
@@ -24,10 +23,10 @@ export const StyledText = styled(Text).attrs({
   ${({ textShadowColor }) =>
     textShadowColor && `text-shadow: 2px 2px ${textShadowColor};`}
 
-  ${media.mediumUp`
-    font-size: ${({ theme }) => `${theme?.fontSize['xl']} !important;`};
+  ${({ theme }) => theme.media.mediumUp`
+    font-size: ${theme?.fontSize['xl']} !important;
   `};
-  ${media.largeUp`
-    font-size: ${({ theme }) => `${theme?.fontSize['xxl']} !important;`};
+  ${({ theme }) => theme.media.largeUp`
+    font-size: ${theme?.fontSize['xxl']} !important;
   `};
 `;

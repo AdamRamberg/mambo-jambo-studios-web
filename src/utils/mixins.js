@@ -1,29 +1,22 @@
 import { css } from 'styled-components';
 
+const createMediaQuery = breakpoint => (...args) => css`
+  @media (min-width: ${`${breakpoint}px`}) {
+    ${css(...args)};
+  }
+`;
+export const createMedia = breakpoints => ({
+  xSmallUp: createMediaQuery(breakpoints.xs),
+  smallUp: createMediaQuery(breakpoints.s),
+  mediumUp: createMediaQuery(breakpoints.m),
+  largeUp: createMediaQuery(breakpoints.l),
+  xLargeUp: createMediaQuery(breakpoints.xl),
+});
+
 export const media = {
-  xSmallUp: (...args) => css`
-    @media (min-width: 480px) {
-      ${css(...args)};
-    }
-  `,
-  smallUp: (...args) => css`
-    @media (min-width: 576px) {
-      ${css(...args)};
-    }
-  `,
-  mediumUp: (...args) => css`
-    @media (min-width: 768px) {
-      ${css(...args)};
-    }
-  `,
-  largeUp: (...args) => css`
-    @media (min-width: 992px) {
-      ${css(...args)};
-    }
-  `,
-  xLargeUp: (...args) => css`
-    @media (min-width: 1200px) {
-      ${css(...args)};
-    }
-  `,
+  xSmallUp: createMediaQuery(480),
+  smallUp: createMediaQuery(576),
+  mediumUp: createMediaQuery(768),
+  largeUp: createMediaQuery(992),
+  xLargeUp: createMediaQuery(1200),
 };

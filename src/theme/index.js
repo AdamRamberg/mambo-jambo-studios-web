@@ -7,7 +7,8 @@ import {
   BRIGHTER_LOVE,
   PURPLE,
 } from './colors';
-
+import { createMedia } from '../utils/mixins';
+import { BREAKPOINTS } from './breakpoints';
 const HEADER_HEIGHT = '64px';
 
 const theme = {
@@ -33,6 +34,7 @@ const theme = {
   header: {
     height: HEADER_HEIGHT,
   },
+  media: createMedia(BREAKPOINTS),
 };
 
 export default theme;
