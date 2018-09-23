@@ -23,6 +23,7 @@ const fontSizeCretor = (scale, options) => {
     large: `${(fontSizeMultiplier * scale) ** 2}rem`,
     medium: `${fontSizeMultiplier * scale}rem`,
     default: `${fontSizeMultiplier}rem`,
+    smaller: `${(fontSizeMultiplier * scale) ** -0.5}rem`,
     small: `${(fontSizeMultiplier * scale) ** -1}rem`,
     xs: `${(fontSizeMultiplier * scale) ** -2}rem`,
     xxs: `${(fontSizeMultiplier * scale) ** -3}rem`,

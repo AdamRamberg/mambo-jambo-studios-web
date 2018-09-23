@@ -4,6 +4,7 @@ import { Link } from '@reach/router';
 import Hamburger from '../Hamburger';
 import SocialLinks from '../../components/SocialLinks';
 import { withDynamicTag } from '../../utils/withDynamicTag';
+import Text from '../../components/Text';
 
 const HEADER_HEIGHT = '64px';
 
@@ -20,12 +21,36 @@ export const HeaderWrapper = styled.header`
 
 export const Logo = styled.img`
   height: ${({ theme }) => theme?.header?.height || HEADER_HEIGHT};
-  width: auto;
+  width: ${({ theme }) => theme?.header?.height || HEADER_HEIGHT};
   padding: 8px;
   transition: all 0.2s ease-in-out;
+`;
 
-  &:hover {
+export const LogoText = styled(Text).attrs({
+  size: 'default',
+  tag: 'p',
+  fontWeight: 'bold',
+})`
+  white-space: nowrap;
+  margin: 0 8px;
+  padding-top: 5px;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 5px solid transparent;
+`;
+
+export const StyledHomeLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: ${({ theme }) => theme?.colors?.text?.primary};
+  transition: all 0.2s ease-in-out;
+
+  &:hover > img {
     transform: scale(1.1);
+  }
+  &:hover > p {
+    border-bottom: 5px solid ${({ theme }) => theme?.colors?.accent};
   }
 `;
 
@@ -88,7 +113,6 @@ export const ListItem = styled.li`
 
 export const StyledLink = withDynamicTag(styled(Link)`
   text-decoration: none;
-  text-transform: uppercase;
   font-weight: bold;
   color: ${({ theme }) => theme?.colors?.text?.primary};
   transition: all 0.2s ease-in-out;

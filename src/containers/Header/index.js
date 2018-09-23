@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { object } from 'prop-types';
 import { withTheme } from 'styled-components';
-import { Link } from '@reach/router';
 
 import {
   HeaderWrapper,
@@ -13,7 +12,10 @@ import {
   LogoHamburgerContainer,
   StyledHamburger,
   StyledSocialLinks,
+  StyledHomeLink,
+  LogoText,
 } from './styled';
+
 import Image from '../../assets/images/mjs-logo-200x200-allwhite.png';
 
 class Header extends Component {
@@ -35,9 +37,10 @@ class Header extends Component {
     return (
       <HeaderWrapper>
         <LogoHamburgerContainer>
-          <Link to="/">
+          <StyledHomeLink to="/">
             <Logo src={Image} />
-          </Link>
+            <LogoText>Mambo Jambo Studios</LogoText>
+          </StyledHomeLink>
           <StyledHamburger
             open={isOpen}
             onClick={this.toggleNav}
