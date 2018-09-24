@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import GLTFLoader from './GLTFLoader';
+import GLTFLoader from 'three-gltf-loader';
 
 const FROM_COLOR = { r: 204, g: 43, b: 94 };
 const TO_COLOR = { r: 117, g: 58, b: 136 };
