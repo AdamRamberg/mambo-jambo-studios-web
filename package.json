@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config internals/webpack/webpack.dev.js",
     "start:prod": "webpack-dev-server --config internals/webpack/webpack.prod.js",
-    "build": "webpack --config internals/webpack/webpack.prod.js"
+    "build": "webpack --config internals/webpack/webpack.prod.js",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern node_modules -- ."
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
