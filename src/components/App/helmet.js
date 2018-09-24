@@ -6,5 +6,6 @@ export const Helmet = () => (
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mambo Jambo Studios AB</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
   </ReactHelmet>
 );

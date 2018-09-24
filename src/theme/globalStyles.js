@@ -13,22 +13,22 @@ injectGlobal`
   ${styledSanitize}
 
   @font-face {
-    font-family: 'PT Sans', sans-serif;
-    src: url('${PTSansRegular}') format('truetype');
+    font-family: "PT Sans";
+    src: url(${PTSansRegular}) format("truetype");
   }
   @font-face {
-    font-family: 'PT Sans', sans-serif;
-    src: url('${PTSansBold}') format('truetype');
+    font-family: "PT Sans";
+    src: url(${PTSansBold}) format("truetype");
     font-weight: bold;
   }
   @font-face {
-    font-family: 'PT Sans', sans-serif;
-    src: url('${PTSansItalic}') format('truetype');
+    font-family: "PT Sans";
+    src: url(${PTSansItalic}) format("truetype");
     font-style: italic;
   }
   @font-face {
-    font-family: 'PT Sans', sans-serif;
-    src: url('${PTSansBoldItalic}') format('truetype');
+    font-family: "PT Sans";
+    src: url(${PTSansBoldItalic}) format("truetype");
     font-weight: bold;
     font-style: italic;
   }
@@ -43,7 +43,7 @@ injectGlobal`
 
   html,
   body {
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     height: 100%;
     width: 100%;
 		margin: 0;

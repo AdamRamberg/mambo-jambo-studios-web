@@ -31,7 +31,7 @@ export default function Logo(scene) {
     vertexColors: THREE.VertexColors,
   });
 
-  loader.load('./static/models/mambo-jambo-logo.glb', gltf => {
+  loader.load('./models/mambo-jambo-logo.glb', gltf => {
     const object = gltf.scene;
 
     object.traverse(child => {
