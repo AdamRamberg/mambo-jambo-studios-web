@@ -3,9 +3,10 @@ import React from 'react';
 import { Wrapper, Link } from './styled';
 import SVGIcon from '../SVGIcon';
 import './icons/github.svg';
-import './icons/gmail.svg';
+import './icons/twitter.svg';
 import './icons/linkedin.svg';
-import { PURPLE, BLOOD_ORANGE, LOVE } from '../../theme/colors';
+import './icons/gmail.svg';
+import { PURPLE, SUNSET, BLOOD_ORANGE, LOVE } from '../../theme/colors';
 
 const SocialLinks = ({ ...rest }) => (
   <Wrapper {...rest}>
@@ -15,6 +16,14 @@ const SocialLinks = ({ ...rest }) => (
       hoverColor={LOVE}
     >
       <SVGIcon name="github" />
+    </Link>
+    <Link
+      leftMargin
+      target="_blank"
+      href="https://twitter.com/adamramberg1"
+      hoverColor={SUNSET}
+    >
+      <SVGIcon name="twitter" />
     </Link>
     <Link
       leftMargin
