@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { BreadText, Wrapper, Image, List, ListItem, EmailLink } from './styled';
-import profileImage from './images/profilepic.png';
+import profileImage from './images/profilepic-lowres.jpg';
 const AboutPage = () => (
   <Wrapper>
     <Image src={profileImage} />
