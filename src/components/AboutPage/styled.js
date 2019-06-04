@@ -12,17 +12,13 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: ${({ theme }) => `${theme?.spacing?.m}`};
-
-  & > span {
-    font-size: ${({ theme }) => `${theme?.fontSize['large']}`};
-  }
 `;
 
 export const BreadText = styled(Text).attrs({
-  size: 'default',
   tag: 'p',
 })`
   width: 100%;
+  line-height: 1.6;
 `;
 
 export const Image = styled.img`

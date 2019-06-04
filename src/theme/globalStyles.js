@@ -55,4 +55,12 @@ injectGlobal`
     min-height: 100%;
     min-width: 100%;
   }
+
+  h1, h2, h3, h4, h5 {
+    color: ${theme?.colors?.brightAccent};
+  }
+
+  span, p {
+    line-height: 1.6;
+  }
 `;

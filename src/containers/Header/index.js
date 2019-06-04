@@ -70,6 +70,11 @@ class Header extends Component {
                 Blog
               </StyledLink>
             </ListItem>
+            <ListItem>
+              <StyledLink onClick={this.closeNav} to="/cv">
+                CV (SWE)
+              </StyledLink>
+            </ListItem>
           </List>
           <StyledSocialLinks />
         </Nav>
