@@ -5,4 +5,5 @@ export const Container = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
+  max-width: 100vw;
 `;

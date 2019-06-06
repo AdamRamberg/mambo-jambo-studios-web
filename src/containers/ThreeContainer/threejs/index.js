@@ -19,6 +19,7 @@ export default function threeEntryPoint(container, options) {
   function resizeCanvas() {
     canvas.style.width = '100%';
     canvas.style.height = '100%';
+    canvas.style.maxWidth = '100vw';
 
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
