@@ -23,7 +23,8 @@ export const BreadText = styled(Text).attrs({
 
 export const Image = styled.img`
   border-radius: 50%;
-  width: 50%;
+  width: auto;
+  height: auto;
   max-width: 200px;
   margin-bottom: ${({ theme }) => theme?.spacing?.m};
 `;
