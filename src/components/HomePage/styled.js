@@ -23,11 +23,11 @@ export const FlexContainer = styled.div`
   `};
 `;
 
-export const StyledHeader = styled(Text).attrs({
+export const StyledHeader = styled(Text).attrs(() => ({
   size: 'large',
   tag: 'h1',
   fontWeight: 'bold',
-})`
+}))`
   flex-basis: 100%;
   margin: 0;
   max-width: 100%;

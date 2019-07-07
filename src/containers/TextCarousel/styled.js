@@ -11,10 +11,10 @@ export const Wrapper = styled.span`
   `};
 `;
 
-export const StyledText = styled(Text).attrs({
+export const StyledText = styled(Text).attrs(() => ({
   size: 'large',
   tag: 'div',
-})`
+}))`
   ${({ color }) => color && `color: ${color};`}
   border: 5px solid ${({ color }) => color}
   padding: 0 1rem;

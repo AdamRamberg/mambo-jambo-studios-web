@@ -14,9 +14,9 @@ export const Wrapper = styled.div`
   padding: ${({ theme }) => `${theme?.spacing?.m}`};
 `;
 
-export const BreadText = styled(Text).attrs({
+export const BreadText = styled(Text).attrs(() => ({
   tag: 'p',
-})`
+}))`
   width: 100%;
   line-height: 1.6;
 `;

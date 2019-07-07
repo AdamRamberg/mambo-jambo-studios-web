@@ -2,9 +2,8 @@ import React, { Fragment } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Router } from '@reach/router';
 
-import '../../theme/globalStyles';
+import GlobalStyle from '../../theme/globalStyles';
 import theme from '../../theme';
-import { AppWrapper } from './styled';
 import { Helmet } from '../Helmet';
 import { Routes } from './routes';
 import Header from '../../containers/Header';
@@ -21,7 +20,8 @@ const AppContent = () => (
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <AppWrapper>
+    <>
+      <GlobalStyle />
       <Helmet />
       <ErrorBoundary error={() => <ErrorPage />}>
         <Router>
@@ -29,7 +29,7 @@ const App = () => (
           <AppContent default />
         </Router>
       </ErrorBoundary>
-    </AppWrapper>
+    </>
   </ThemeProvider>
 );
 

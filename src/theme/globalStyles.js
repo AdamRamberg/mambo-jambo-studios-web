@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import styledSanitize from 'styled-sanitize';
 
 import theme from './index';
@@ -8,8 +8,7 @@ import PTSansBold from '../assets/fonts/PT_Sans/PT_Sans-Web-Bold.ttf';
 import PTSansItalic from '../assets/fonts/PT_Sans/PT_Sans-Web-Italic.ttf';
 import PTSansBoldItalic from '../assets/fonts/PT_Sans/PT_Sans-Web-BoldItalic.ttf';
 
-/* eslint no-unused-expressions: 0 */
-injectGlobal`
+export default createGlobalStyle`
   ${styledSanitize}
 
   @font-face {

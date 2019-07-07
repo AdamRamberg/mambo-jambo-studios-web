@@ -12,7 +12,7 @@ export default class ThreeContainer extends Component {
   render() {
     return (
       <Container
-        innerRef={element => {
+        ref={element => {
           this.threeRootElement = element;
         }}
       />

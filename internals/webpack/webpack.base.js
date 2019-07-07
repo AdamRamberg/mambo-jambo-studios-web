@@ -19,7 +19,7 @@ module.exports = options => ({
   entry: [path.join(process.cwd(), 'src/index.js')],
   output: {
     publicPath: '',
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
     chunkFilename: '[name].[chunkhash].js',
   },
   module: {

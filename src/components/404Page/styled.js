@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export const Heading = styled(Text).attrs({
+export const Heading = styled(Text).attrs(() => ({
   size: 'large',
   tag: 'h1',
-})``;
+}))``;

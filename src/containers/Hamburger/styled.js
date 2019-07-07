@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 const TRANSLATE_TO = '12px';
 
@@ -158,11 +158,13 @@ export const HamburgerBar = styled.span`
     const duration = !hasOpenStateChanged ? 0 : animationDuration;
     const animationOpts = `${duration}s linear forwards`;
 
-    return `animation: ${createKeyframes({
-      index,
-      open,
-      animationType,
-    })} ${animationOpts}
-  `;
+    return css`
+      animation: ${createKeyframes({
+          index,
+          open,
+          animationType,
+        })}
+        ${animationOpts};
+    `;
   }};
 `;

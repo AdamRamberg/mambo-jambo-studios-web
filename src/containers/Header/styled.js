@@ -26,11 +26,11 @@ export const Logo = styled.img`
   transition: all 0.2s ease-in-out;
 `;
 
-export const LogoText = styled(Text).attrs({
+export const LogoText = styled(Text).attrs(() => ({
   size: 'default',
   tag: 'p',
   fontWeight: 'bold',
-})`
+}))`
   white-space: nowrap;
   margin: 0 8px;
   padding-top: 5px;
