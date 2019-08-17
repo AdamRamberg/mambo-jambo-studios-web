@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import fbt from 'fbt';
 import { object } from 'prop-types';
 import { withTheme } from 'styled-components';
 
@@ -15,73 +16,65 @@ import {
   StyledHomeLink,
   LogoText,
 } from './styled';
-
 import Image from '../../assets/images/mjs-logo-200x200-allwhite.png';
+import LocaleSelector from './localeSelector';
 
-class Header extends Component {
-  state = {
-    isOpen: false,
-  };
+const Header = ({ theme }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const closeNav = () => setIsOpen(false);
+  const toggleNav = () => setIsOpen(!isOpen);
 
-  closeNav = () => {
-    this.setState({ isOpen: false });
-  };
-
-  toggleNav = () => {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
-  };
-
-  render() {
-    const { isOpen } = this.state;
-    const { primary: hamburgerColor } = this.props.theme.colors.text;
-    return (
-      <HeaderWrapper>
-        <LogoHamburgerContainer>
-          <StyledHomeLink to="/">
-            <Logo src={Image} />
-            <LogoText>Mambo Jambo Studios</LogoText>
-          </StyledHomeLink>
-          <StyledHamburger
-            open={isOpen}
-            onClick={this.toggleNav}
-            animationType="elastic"
-            color={hamburgerColor}
-          />
-        </LogoHamburgerContainer>
-        <Nav isOpen={isOpen}>
-          <List>
-            <ListItem>
-              <StyledLink onClick={this.closeNav} to="/about">
-                About
-              </StyledLink>
-            </ListItem>
-            <ListItem>
-              <StyledLink onClick={this.closeNav} to="/portfolio">
-                Portfolio
-              </StyledLink>
-            </ListItem>
-            <ListItem>
-              <StyledLink
-                tag="a"
-                onClick={this.closeNav}
-                target="_blank"
-                href="https://medium.com/@adamramberg/"
-              >
-                Blog
-              </StyledLink>
-            </ListItem>
-            <ListItem>
-              <StyledLink onClick={this.closeNav} to="/cv">
-                CV (SWE)
-              </StyledLink>
-            </ListItem>
-          </List>
-          <StyledSocialLinks />
-        </Nav>
-      </HeaderWrapper>
-    );
-  }
-}
+  const { primary: hamburgerColor } = theme.colors.text;
+  return (
+    <HeaderWrapper>
+      <LogoHamburgerContainer>
+        <StyledHomeLink to="/">
+          <Logo src={Image} />
+          <LogoText>Mambo Jambo Studios</LogoText>
+        </StyledHomeLink>
+        <StyledHamburger
+          open={isOpen}
+          onClick={toggleNav}
+          animationType="elastic"
+          color={hamburgerColor}
+        />
+      </LogoHamburgerContainer>
+      <Nav isOpen={isOpen}>
+        <List>
+          <ListItem>
+            <StyledLink onClick={closeNav} to="/about">
+              <fbt desc="header item about">About</fbt>
+            </StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink onClick={closeNav} to="/portfolio">
+              <fbt desc="header item portfolio">Portfolio</fbt>
+            </StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink
+              tag="a"
+              onClick={closeNav}
+              target="_blank"
+              href="https://medium.com/@adamramberg/"
+            >
+              <fbt desc="header item blog">Blog</fbt>
+            </StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink onClick={closeNav} to="/cv">
+              <fbt desc="header item cv">CV (SWE)</fbt>
+            </StyledLink>
+          </ListItem>
+          <ListItem>
+            <LocaleSelector />
+          </ListItem>
+        </List>
+        <StyledSocialLinks />
+      </Nav>
+    </HeaderWrapper>
+  );
+};
 
 Header.propTypes = {
   theme: object,

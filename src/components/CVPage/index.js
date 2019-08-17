@@ -1,6 +1,7 @@
 import React from 'react';
 import { Wrapper, BreadText, SubHeader, Details, ListItem } from './styled';
 
+// TODO: Translations
 export default () => (
   <Wrapper>
     <Details>

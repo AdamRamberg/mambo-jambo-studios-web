@@ -62,4 +62,11 @@ export default createGlobalStyle`
   span, p {
     line-height: 1.6;
   }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+  }
 `;

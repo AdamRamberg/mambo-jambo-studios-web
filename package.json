@@ -9,10 +9,21 @@
     "lint": "eslint --ignore-path .gitignore --ignore-pattern node_modules -- .",
     "preinstall": "yarn run gen:versions",
     "start": "webpack-dev-server --config internals/webpack/webpack.dev.js",
-    "start:prod": "webpack-dev-server --config internals/webpack/webpack.prod.js"
+    "start:prod": "webpack-dev-server --config internals/webpack/webpack.prod.js",
+    "manifest-fbts": "babel-node node_modules/babel-plugin-fbt/bin/manifest --src src",
+    "collect-fbts": "babel-node node_modules/babel-plugin-fbt/bin/collectFBT --pretty --manifest < .src_manifest.json > .source_strings.json",
+    "translate-fbts": "babel-node node_modules/babel-plugin-fbt/bin/translate.js --pretty --translations translations/*.json --jenkins > src/translatedFbts.json",
+    "translate-fbts-single-file": "babel-node node_modules/babel-plugin-fbt/bin/translate.js --pretty --jenkins --stdin < translation_input.json > src/translatedFbts.json",
+    "clean-fbts": "rm .enum_manifest.json .src_manifest.json .source_strings.json src/translatedFbts.json 2&> /dev/null || exit 0",
+    "generate-fbt-translations": "babel-node src/i18n/generate-fbt-translations --locales src/i18n/locales.js --multi-files translations",
+    "generate-fbt-translations-single-file": "babel-node src/i18n/generate-fbt-translations --locales src/i18n/locales.js",
+    "prepare-fbts": "yarn manifest-fbts && yarn collect-fbts && yarn generate-fbt-translations && yarn translate-fbts",
+    "prestart": "yarn prepare-fbts",
+    "prebuild": "yarn prepare-fbts"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/plugin-syntax-export-default-from": "^7.2.0",
@@ -20,6 +31,8 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
+    "babel-plugin-fbt": "^0.9.12",
+    "babel-plugin-fbt-runtime": "^0.9.1",
     "copy-webpack-plugin": "^5.0.4",
     "core-js": "^3.1.4",
     "eslint": "^5.1.0",
@@ -35,10 +48,12 @@
     "svg-sprite-loader": "^4.1.6",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "yargs": "^13.3.0"
   },
   "dependencies": {
     "@reach/router": "^1.1.1",
+    "fbt": "^0.9.51",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

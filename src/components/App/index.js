@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Router } from '@reach/router';
 
@@ -10,27 +10,36 @@ import Header from '../../containers/Header';
 import ErrorBoundary from '../../containers/ErrorBoundary';
 import ErrorPage from '../ErrorPage';
 import VersionsPage from '../VersionsPage';
+import LocaleProvider from '../../i18n/localeProvider';
+import locales from '../../i18n/locales';
+import translations from '../../translatedFbts.json';
 
 const AppContent = () => (
-  <Fragment>
+  <>
     <Header />
     <Routes />
-  </Fragment>
+  </>
 );
 
 const App = () => (
-  <ThemeProvider theme={theme}>
-    <>
-      <GlobalStyle />
-      <Helmet />
-      <ErrorBoundary error={() => <ErrorPage />}>
-        <Router>
-          <VersionsPage path="versions" />
-          <AppContent default />
-        </Router>
-      </ErrorBoundary>
-    </>
-  </ThemeProvider>
+  <LocaleProvider
+    locales={locales}
+    translations={translations}
+    defaultLocale={navigator.language}
+  >
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <Helmet />
+        <ErrorBoundary error={() => <ErrorPage />}>
+          <Router>
+            <VersionsPage path="versions" />
+            <AppContent default />
+          </Router>
+        </ErrorBoundary>
+      </>
+    </ThemeProvider>
+  </LocaleProvider>
 );
 
 export default App;

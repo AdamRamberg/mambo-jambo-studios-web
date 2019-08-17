@@ -1,3 +1,9 @@
 dist
 node_modules
 yarn-error.log
+
+# FBT artifcats
+.source_strings.json
+.src_manifest.json
+.enum_manifest.json
+src/translatedFbts.json

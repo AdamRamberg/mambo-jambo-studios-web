@@ -1,4 +1,5 @@
 import React from 'react';
+import fbt from 'fbt';
 import { node } from 'prop-types';
 
 import { Wrapper, Heading } from './styled';
@@ -9,7 +10,10 @@ const ErrorPage = ({ children }) => (
       <span role="img" aria-label="poop">
         💩
       </span>
-      &nbsp; Whoops! An unexpected error occurred...
+      &nbsp;
+      <fbt desc="error page body text">
+        Whoops! An unexpected error occurred...
+      </fbt>
     </Heading>
     {children}
   </Wrapper>

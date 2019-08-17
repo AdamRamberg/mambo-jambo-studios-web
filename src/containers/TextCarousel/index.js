@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { string, arrayOf, shape } from 'prop-types';
+import { string, arrayOf, shape, oneOfType, object } from 'prop-types';
 
 import { StyledText, Wrapper } from './styled';
 
@@ -48,7 +48,7 @@ export default class TextCarousel extends Component {
 TextCarousel.propTypes = {
   items: arrayOf(
     shape({
-      text: string.isRequired,
+      text: oneOfType([string, object]).isRequired,
       backgroundColor: string,
       color: string,
       textShadowColor: string,

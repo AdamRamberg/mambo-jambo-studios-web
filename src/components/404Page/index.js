@@ -1,4 +1,5 @@
 import React from 'react';
+import fbt from 'fbt';
 
 import { Wrapper, Heading } from './styled';
 import Button from '../Button';
@@ -9,10 +10,13 @@ const FourOFourPage = () => (
       <span role="img" aria-label="no">
         🙈
       </span>
-      &nbsp; The page your tried to reach does not exist.
+      &nbsp;
+      <fbt desc="404 body text">
+        The page your tried to reach does not exist.
+      </fbt>
     </Heading>
     <Button reachRouterLink to="/">
-      Home Page
+      <fbt desc="404 home button">Home Page</fbt>
     </Button>
   </Wrapper>
 );
