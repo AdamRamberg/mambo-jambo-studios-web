@@ -1,4 +1,10 @@
 import { init } from 'fbt';
-import translations from '../translatedFbts.json';
+import { setLocales } from './locales';
+import { setLocale } from './localeUtils';
+import { getLocaleFromStorage } from './storage';
 
-init({ translations });
+export default ({ translations, locales, defaultLocale }) => {
+  init({ translations });
+  setLocales(locales);
+  setLocale(getLocaleFromStorage() || defaultLocale);
+};

@@ -11,8 +11,6 @@ import ErrorBoundary from '../../containers/ErrorBoundary';
 import ErrorPage from '../ErrorPage';
 import VersionsPage from '../VersionsPage';
 import LocaleProvider from '../../i18n/localeProvider';
-import locales from '../../i18n/locales';
-import translations from '../../translatedFbts.json';
 
 const AppContent = () => (
   <>
@@ -22,11 +20,7 @@ const AppContent = () => (
 );
 
 const App = () => (
-  <LocaleProvider
-    locales={locales}
-    translations={translations}
-    defaultLocale={navigator.language}
-  >
+  <LocaleProvider>
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
