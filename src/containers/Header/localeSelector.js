@@ -1,7 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-
-import LocaleContext from '../../i18n/localeContext';
+import { LocaleConsumer } from 'fbt-easy-setup';
 
 const Emoji = ({ locale }) =>
   locale === 'sv_SE' ? (
@@ -19,7 +18,7 @@ Emoji.propTypes = {
 };
 
 const LocaleSelector = () => (
-  <LocaleContext.Consumer>
+  <LocaleConsumer>
     {({ locale, setLocale }) => (
       <button
         type="button"
@@ -28,7 +27,7 @@ const LocaleSelector = () => (
         <Emoji locale={locale} />
       </button>
     )}
-  </LocaleContext.Consumer>
+  </LocaleConsumer>
 );
 
 export default LocaleSelector;

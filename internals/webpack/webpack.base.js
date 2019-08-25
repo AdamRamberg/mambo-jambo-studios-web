@@ -17,7 +17,7 @@ const plugins = [
 module.exports = options => ({
   mode: options.mode,
   entry: [
-    path.join(process.cwd(), 'src/i18n/appInit.js'),
+    path.join(process.cwd(), 'src/i18n/init.js'),
     path.join(process.cwd(), 'src/index.js'),
   ],
   output: {

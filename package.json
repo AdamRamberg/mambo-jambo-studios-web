@@ -55,6 +55,7 @@
   "dependencies": {
     "@reach/router": "^1.1.1",
     "fbt": "^0.9.51",
+    "fbt-easy-setup": "^0.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

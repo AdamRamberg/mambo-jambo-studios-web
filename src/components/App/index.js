@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Router } from '@reach/router';
+import { LocaleProvider } from 'fbt-easy-setup';
 
 import GlobalStyle from '../../theme/globalStyles';
 import theme from '../../theme';
@@ -10,7 +11,6 @@ import Header from '../../containers/Header';
 import ErrorBoundary from '../../containers/ErrorBoundary';
 import ErrorPage from '../ErrorPage';
 import VersionsPage from '../VersionsPage';
-import LocaleProvider from '../../i18n/localeProvider';
 
 const AppContent = () => (
   <>

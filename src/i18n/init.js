@@ -1,10 +1,5 @@
-import { init } from 'fbt';
-import { setLocales } from './locales';
-import { setLocale } from './localeUtils';
-import { getLocaleFromStorage } from './storage';
+import { init } from 'fbt-easy-setup';
+import translations from '../translatedFbts.json';
+import locales from './locales';
 
-export default ({ translations, locales, defaultLocale }) => {
-  init({ translations });
-  setLocales(locales);
-  setLocale(getLocaleFromStorage() || defaultLocale);
-};
+init({ translations, locales, defaultLocale: navigator.language });
