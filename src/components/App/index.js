@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Router } from '@reach/router';
 import { LocaleProvider } from 'fbt-easy-setup';
@@ -11,6 +11,7 @@ import Header from '../../containers/Header';
 import ErrorBoundary from '../../containers/ErrorBoundary';
 import ErrorPage from '../ErrorPage';
 import VersionsPage from '../VersionsPage';
+import Loading from '../LoadingIndicator';
 
 const AppContent = () => (
   <>
@@ -26,10 +27,12 @@ const App = () => (
         <GlobalStyle />
         <Helmet />
         <ErrorBoundary error={() => <ErrorPage />}>
-          <Router>
-            <VersionsPage path="versions" />
-            <AppContent default />
-          </Router>
+          <Suspense fallback={<Loading />}>
+            <Router>
+              <VersionsPage path="versions" />
+              <AppContent default />
+            </Router>
+          </Suspense>
         </ErrorBoundary>
       </>
     </ThemeProvider>
