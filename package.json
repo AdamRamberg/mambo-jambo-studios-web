@@ -15,8 +15,8 @@
     "translate-fbts": "babel-node node_modules/babel-plugin-fbt/bin/translate.js --pretty --translations translations/*.json --jenkins > src/translatedFbts.json",
     "translate-fbts-single-file": "babel-node node_modules/babel-plugin-fbt/bin/translate.js --pretty --jenkins --stdin < translation_input.json > src/translatedFbts.json",
     "clean-fbts": "rm .enum_manifest.json .src_manifest.json .source_strings.json src/translatedFbts.json 2&> /dev/null || exit 0",
-    "fbt-generate-translations": "babel-node node_modules/fbt-generate-translations --locales src/i18n/appLocales.js --multi-files translations",
-    "fbt-generate-translations-single-file": "babel-node node_modules/fbt-generate-translations --locales src/i18n/appLocales.js",
+    "fbt-generate-translations": "babel-node node_modules/fbt-generate-translations --locales src/i18n/locales.js --multi-files translations",
+    "fbt-generate-translations-single-file": "babel-node node_modules/fbt-generate-translations --locales src/i18n/locales.js",
     "prepare-fbts": "yarn manifest-fbts && yarn collect-fbts && yarn fbt-generate-translations && yarn translate-fbts",
     "prestart": "yarn prepare-fbts",
     "prebuild": "yarn prepare-fbts"
