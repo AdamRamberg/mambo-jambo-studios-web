@@ -2,15 +2,6 @@ import React from 'react';
 import fbt from 'fbt';
 import { Wrapper, BreadText, H1, H2, H3, Details, ListItem } from './styled';
 
-/*
-- Generate translations
-- Do translations
-- CV - SWE
-- Gå igenom
-- Push
-- PDF
-*/
-
 export default () => (
   <Wrapper>
     <Details>

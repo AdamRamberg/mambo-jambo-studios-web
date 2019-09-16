@@ -197,13 +197,6 @@
         }
       ]
     },
-    "w53H6V8egQwZklwQENxizg==": {
-      "translations": [
-        {
-          "translation": "Under hösten 2017 tog jag mitt första heltidsuppdrag som egen företagare på Maverick by Sigma, vilket är Sigmas kommunikationsbyrå. Jag jobbade då tillsammans med UX-designers och designers för att ta fram hemsidor för sju olika varumärken åt en av Mavericks kunder. Tekniker jag använde mig av var bland annat vanilla javascript, sass och Webpack."
-        }
-      ]
-    },
     "4jmQofKChUr4+0Ymyg0PZA==": {
       "translations": [
         {
@@ -278,13 +271,6 @@
       "translations": [
         {
           "translation": "Education"
-        }
-      ]
-    },
-    "zW+fyv+lEzaz092LF7GVBw==": {
-      "translations": [
-        {
-          "translation": "2009 - 2013. Bachelor degrees from Saint John’s University (Minnesota, USA) majoring in Computer Science and doing a minior in art."
         }
       ]
     },
@@ -411,6 +397,20 @@
       "translations": [
         {
           "translation": "CV"
+        }
+      ]
+    },
+    "QDEOHr91TjYKIMMOR7jyPQ==": {
+      "translations": [
+        {
+          "translation": "Under hösten 2017 tog jag mitt första heltidsuppdrag som egen företagare på Maverick by Sigma, vilket är Sigmas kommunikationsbyrå. Jag jobbade då tillsammans med UX-designers och designers för att ta fram hemsidor för sju olika varumärken åt en av Mavericks kunder. Tekniker jag använde mig av var bland annat vanilla javascript, sass och Webpack."
+        }
+      ]
+    },
+    "PFfzE9pPyuwZ0mX1jWlfnQ==": {
+      "translations": [
+        {
+          "translation": "2009 – 2013. Undergraduate student (Bachelor Degree) på Saint John’s University (Minnesota, USA) med en major i Computer Science och en minor i Art."
         }
       ]
     }
