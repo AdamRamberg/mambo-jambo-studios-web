@@ -35,7 +35,8 @@ export default () => (
     </H2>
     <H3>
       <fbt desc="cv.experience.vgcs.heading">
-        2017 - curent. Senior frontend developer at VGCS (Volvo) - self employed
+        2017 - current. Senior frontend developer at VGCS (Volvo) - self
+        employed
       </fbt>
     </H3>
     <BreadText>
@@ -154,7 +155,7 @@ export default () => (
     <ul>
       <ListItem>
         <fbt desc="cv.acamdemic-merits.magnacumlaude">
-          Magna Cum Laude (graduated with grades above 3.75)
+          Magna Cum Laude (graduated with an average grade above 3.75)
         </fbt>
       </ListItem>
     </ul>
