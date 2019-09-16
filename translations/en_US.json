@@ -1,13 +1,6 @@
 {
   "fb-locale": "en_US",
   "translations": {
-    "3ljfk/ZEKU1j8fctlNobsw==": {
-      "translations": [
-        {
-          "translation": "The page your tried to reach does not exist."
-        }
-      ]
-    },
     "ZMBYPgptHeX8P25HptC5og==": {
       "translations": [
         {
@@ -148,10 +141,276 @@
         }
       ]
     },
-    "xu/6QYfJzIg9NeXWC6C3dw==": {
+    "3ljfk/ZEKU1j8fctlNobsw==": {
       "translations": [
         {
-          "translation": "CV (SWE)"
+          "translation": "The page your tried to reach does not exist."
+        }
+      ]
+    },
+    "VZEOtB/cW/jIMiXVkAb0lw==": {
+      "translations": [
+        {
+          "translation": "Senior React & Node.js developer"
+        }
+      ]
+    },
+    "SO00TybBsQ5CCe61NFMeRg==": {
+      "translations": [
+        {
+          "translation": "Summary"
+        }
+      ]
+    },
+    "V8lt0dAJeAlDflcJQlyikw==": {
+      "translations": [
+        {
+          "translation": "Ever since I programmed a race between a turtle and a rabbit in Visual Basics in school I have been motivated to use my problem solving skills, creativity and knowledge to create digital experiences, products and solutions. I like responsibilities and it excites me when me and my team have the opportunity to influence and to take ownership of the solution we deliver. An environment where I am encouraged to try new ideas and question the way problems are currently solved in order to improve is where I thrive the most. Since I value freedom and choice, I started my own company in 2015 in order to work as a consultant and freelancer to be able to pick work that really motivates me."
+        }
+      ]
+    },
+    "ZnD85/xuBAUm/Eiqy/u8Kg==": {
+      "translations": [
+        {
+          "translation": "Experience"
+        }
+      ]
+    },
+    "NGbwmWh2oPr61GgR1MjfGg==": {
+      "translations": [
+        {
+          "translation": "2017 - curent. Senior frontend developer at VGCS (Volvo) - self employed"
+        }
+      ]
+    },
+    "+td7Gml1o0OXqbsXahbgjA==": {
+      "translations": [
+        {
+          "translation": "In the winter of 2017 I started my current contract as a senior frontend framework developer at VGCS (Volvo Group Connected Solutions) located at Lindholmen, Gothenburg. The contract started on site. but since me and my wife moved to another city in the early 2019, I have worked remotely. The work has been focused on building Volvo Connect, Volvo’s next generation digital platform offering digital services to its customers. I have been part of the UI Framework team, which means that I have worked with common libraries (UI, data layer, data fetching, etc.), best practices, infrastructure (CI/CD), but I have also developed components and views in React. I have used the following tech and frameworks (among others): React, Redux, Redux-Saga, Express.js, AWS, Webpack, Jest, etc. During a period of 6 months I was also the scrum master of my team."
+        }
+      ]
+    },
+    "oxDAuDD9Zyhlc7/ncxG+Cw==": {
+      "translations": [
+        {
+          "translation": "2017 (3 months). Frontend developer at Maverick by Sigma - self employed"
+        }
+      ]
+    },
+    "w53H6V8egQwZklwQENxizg==": {
+      "translations": [
+        {
+          "translation": "In the fall of 2017 I did my first full-time contract as a freelancer / consultant and it was for a communication and web agency called Maverick by Sigma. At Maverick I worked together with art and UX designers to produce a white label website that was suited and rebrandable for 7 different brands. The tech stack used was Javascript, Sass and Webpack."
+        }
+      ]
+    },
+    "4jmQofKChUr4+0Ymyg0PZA==": {
+      "translations": [
+        {
+          "translation": "2017. Fullstack developer at Annevo - employed"
+        }
+      ]
+    },
+    "jZEru6ryOxWU+nnsgEoydQ==": {
+      "translations": [
+        {
+          "translation": "In the beginning of 2017 I started to work at a consulting agency called Annevo. During my time at Annevo I worked on 3 projects: an online multiplayer mobile game in Unity3d, a mobile app developed in React Native, and on a route optimization system developed in React (frontend) and in C# (backend). I also gained experience using Azure, AWS and mLab (MongoDB)."
+        }
+      ]
+    },
+    "MPHSVCQ5An3W8jdQRcJfNA==": {
+      "translations": [
+        {
+          "translation": "2017. The Astro - self made / self published game"
+        }
+      ]
+    },
+    "o+lrAgTyIk/6Snz/qbiN3w==": {
+      "translations": [
+        {
+          "translation": "In the spring of 2017 I worked together with the YouTuber Erik Thorsell (also known as Hazardous) to develop a casual mobile game in Unity3D (C#). It was released for both iOS and Android and was downloaded more than 30000 times."
+        }
+      ]
+    },
+    "LJ0fJEw6b8RnfFaFaog5hA==": {
+      "translations": [
+        {
+          "translation": "2015. FordonsGas Sverige (mobile app) - self employed"
+        }
+      ]
+    },
+    "uqg2/0l8umCYOdLiENYAZw==": {
+      "translations": [
+        {
+          "translation": "During the fall of 2015 I started my career working in my own company as a consultant / freelancer. My first job was to develop a mobile app for FordonsGas Sverige where one could find all their gas stations. I was responsible for the full process, for example gather requirements, design, development, testing and release. The tech used was Objective-C, Java (Android), AWS and MongoDB."
+        }
+      ]
+    },
+    "p53xaJNaYsrYcOLidgFxMw==": {
+      "translations": [
+        {
+          "translation": "Other experiences"
+        }
+      ]
+    },
+    "6ySgFkfRB46E0Q3ZiBOD0Q==": {
+      "translations": [
+        {
+          "translation": "2015 - 2016. Developer at CellMark (C# and SQL)."
+        }
+      ]
+    },
+    "rixUI7AZTVyrEzKUMjmi3g==": {
+      "translations": [
+        {
+          "translation": "2013 - 2015. Developer at Noventus (C++, C#, SQL)."
+        }
+      ]
+    },
+    "0/MTLeryy9fAcPBY/bSWkg==": {
+      "translations": [
+        {
+          "translation": "2008 - 2009. Posten - postman."
+        }
+      ]
+    },
+    "k6mBg7lLffsUM1wfyYYeMg==": {
+      "translations": [
+        {
+          "translation": "Education"
+        }
+      ]
+    },
+    "zW+fyv+lEzaz092LF7GVBw==": {
+      "translations": [
+        {
+          "translation": "2009 - 2013. Bachelor degrees from Saint John’s University (Minnesota, USA) majoring in Computer Science and minioring in art."
+        }
+      ]
+    },
+    "xle9ts3vHVDnoWQxOXP8Lg==": {
+      "translations": [
+        {
+          "translation": "2005 - 2008. High school degree in science and athletics from Porthälla Gymnasium."
+        }
+      ]
+    },
+    "EX4g2zpEKhwrqAJmIGWNYw==": {
+      "translations": [
+        {
+          "translation": "Academic Merits"
+        }
+      ]
+    },
+    "J3cvXZrKxtIjIVliNWOt5w==": {
+      "translations": [
+        {
+          "translation": "Magna Cum Laude (graduated with grades above 3.75)"
+        }
+      ]
+    },
+    "pvmxBOwxGgl4Mw/eqfhs8g==": {
+      "translations": [
+        {
+          "translation": "Technical Knowledge"
+        }
+      ]
+    },
+    "aqAGautwN0EzN0B+a6QlTg==": {
+      "translations": [
+        {
+          "translation": "Prefer to work with Javascript, Node.js, React, CSS, HTML and C#. I also have knowledge in AWS, React Native, Gatsby, Next.js, Unity3D, Git, Photoshop, SQL / NoSQL."
+        }
+      ]
+    },
+    "wBs5YlSHX5ALAQBJ2mJxMQ==": {
+      "translations": [
+        {
+          "translation": "Other"
+        }
+      ]
+    },
+    "qO32yK/9PKLVlVgeMLcuNA==": {
+      "translations": [
+        {
+          "translation": "Fluent in Swedish and English"
+        }
+      ]
+    },
+    "C+mc1xAbx7IGzaHvzGAHYA==": {
+      "translations": [
+        {
+          "translation": "Drivers license"
+        }
+      ]
+    },
+    "Jq3QC5KINKTusrmT5sfQNQ==": {
+      "translations": [
+        {
+          "translation": "References and certificates"
+        }
+      ]
+    },
+    "gGbCgTq304Vn8jhTTLtHOA==": {
+      "translations": [
+        {
+          "translation": "Available upon request."
+        }
+      ]
+    },
+    "ZCMK+nFoDGRewm2FGyHlPA==": {
+      "translations": [
+        {
+          "translation": "Portfolio"
+        }
+      ]
+    },
+    "jaKrGH0BVINzMVGNRsRSyg==": {
+      "translations": [
+        {
+          "translation": "Github: {=https://github.com/AdamRamberg}"
+        }
+      ]
+    },
+    "zL6WLLIm2Ve7WmR99Xpffg==": {
+      "translations": [
+        {
+          "translation": "https://github.com/AdamRamberg"
+        }
+      ]
+    },
+    "KbMDfcWpd9MEzx9kjt4f0A==": {
+      "translations": [
+        {
+          "translation": "Technical blog: {=https://medium.com/@adamramberg/}"
+        }
+      ]
+    },
+    "OaIqVfsRZoJCgobah2wNJQ==": {
+      "translations": [
+        {
+          "translation": "https://medium.com/@adamramberg/"
+        }
+      ]
+    },
+    "PbSWAamQcegXFd7RDJFMbQ==": {
+      "translations": [
+        {
+          "translation": "Interactive portfolio from 2017 developed in Unity3D: {=http://portfolio.mambojambostudios.com/}"
+        }
+      ]
+    },
+    "xQiuv2Pdj0TXpMDfse9ajg==": {
+      "translations": [
+        {
+          "translation": "http://portfolio.mambojambostudios.com/"
+        }
+      ]
+    },
+    "YPeL4iMlzsaOPjOCeAa56g==": {
+      "translations": [
+        {
+          "translation": "CV"
         }
       ]
     }

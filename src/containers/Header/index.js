@@ -63,7 +63,7 @@ const Header = ({ theme }) => {
           </ListItem>
           <ListItem>
             <StyledLink onClick={closeNav} to="/cv">
-              <fbt desc="header item cv">CV (SWE)</fbt>
+              <fbt desc="header item cv">CV</fbt>
             </StyledLink>
           </ListItem>
           <ListItem>

@@ -21,9 +21,16 @@ export const BreadText = styled(Text).attrs(() => ({
   line-height: 1.6;
 `;
 
-export const SubHeader = styled.h2`
-  font-size: ${({ theme }) => `${theme?.fontSize['medium']};`};
+export const H1 = styled.h1`
+  font-size: ${({ theme }) => `${theme?.fontSize['xxl']};`};
+`;
 
+export const H2 = styled.h2`
+  font-size: ${({ theme }) => `${theme?.fontSize['xl']};`};
+`;
+
+export const H3 = styled.h3`
+  font-size: ${({ theme }) => `${theme?.fontSize['medium']};`};
   color: ${BRIGHTER_PURPLE};
 `;
 

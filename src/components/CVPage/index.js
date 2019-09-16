@@ -1,142 +1,226 @@
 import React from 'react';
-import { Wrapper, BreadText, SubHeader, Details, ListItem } from './styled';
+import fbt from 'fbt';
+import { Wrapper, BreadText, H1, H2, H3, Details, ListItem } from './styled';
 
-// TODO: Translations
+/*
+- Generate translations
+- Do translations
+- CV - SWE
+- Gå igenom
+- Push
+- PDF
+*/
+
 export default () => (
   <Wrapper>
     <Details>
       Adam Ramberg <br />
       Storgatan 41B 871 30, Härnösand <br />
-      0723 26 85 86 <br />
+      +46 723 26 85 86 <br />
       <a href="mailto:adam@mambojambostudios.com">adam@mambojambostudios.com</a>
     </Details>
-    <h1>Sammanfattning</h1>
+    <H1>
+      <fbt desc="cv.heading">Senior React & Node.js developer</fbt>
+    </H1>
+    <H2>
+      <fbt desc="cv.summary.heading">Summary</fbt>
+    </H2>
     <BreadText>
-      Ända sedan jag för första gången programmerade ett race mellan en
-      sköldpadda och en hare i Visual Basic i skolan så har mitt
-      problemlösningsintresse drivit mig till att använda mina kunskaper och min
-      kreativitet för att skapa digitala upplevelser, produkter och lösningar.
-      Jag gillar att ta ansvar och trivs som allra bäst när jag och mitt team
-      har möjlighet att känna ett ägandeskap i det vi levererar. Utöver det
-      tekniska så är det viktigt för mig att jobba i en miljö där det uppmuntras
-      och tillåts att testa nya idéer, men också att ifrågasätta varför ett
-      problem ska lösas på ett specifikt sätt. Mina drivkrafter nämnda ovan
-      gjorde att jag 2015 valde att starta eget företag för att på så sätt få
-      friheten att själv välja att arbeta med det som jag blir motiverad av.{' '}
+      <fbt desc="cv.summary.body">
+        Ever since I programmed a race between a turtle and a rabbit in Visual
+        Basics in school I have been motivated to use my problem solving skills,
+        creativity and knowledge to create digital experiences, products and
+        solutions. I like responsibilities and it excites me when me and my team
+        have the opportunity to influence and to take ownership of the solution
+        we deliver. An environment where I am encouraged to try new ideas and
+        question the way problems are currently solved in order to improve is
+        where I thrive the most. Since I value freedom and choice, I started my
+        own company in 2015 in order to work as a consultant and freelancer to
+        be able to pick work that really motivates me.
+      </fbt>
     </BreadText>
-    <h1>Arbetslivserfarenhet</h1>
-    <SubHeader>
-      2017 - nuvarande. Frontendutvecklare på VGCS (egen företagare)
-    </SubHeader>
+    <H2>
+      <fbt desc="cv.experience.heading">Experience</fbt>
+    </H2>
+    <H3>
+      <fbt desc="cv.experience.vgcs.heading">
+        2017 - curent. Senior frontend developer at VGCS (Volvo) - self employed
+      </fbt>
+    </H3>
     <BreadText>
-      Vintern 2017 tog jag mitt nuvarande uppdrag som frontendutvecklare och
-      underkonsult på VGCS (Volvo Group Connected Solutions) som har sitt kontor
-      på Lindholmen i Göteborg. Uppdraget har inneburit att vara en del av
-      bygget av Volvo Connect som är nästa generations användargränssnitt för
-      att interagera med Volvo Trucks digitala service:ar. Jag har jobbat i ett
-      team som jobbar med UI Framework, vilket innebär att jag främst haft
-      ansvar för gemensamma bibliotek, centrala lösningar i applikationen samt
-      infrastruktur (CI / CD, automatiserad testning, osv.), men jag har även
-      jobbat direkt med UI som används av slutkund. Har under uppdraget använt
-      följande tekniker och ramverk: React, Redux, Redux-Saga, Express
-      (Node.js), AWS, Webpack och Jest. Har under en period under uppdraget
-      också varit Scrum Master.
+      <fbt desc="cv.experience.vgcs.body">
+        In the winter of 2017 I started my current contract as a senior frontend
+        framework developer at VGCS (Volvo Group Connected Solutions) located at
+        Lindholmen, Gothenburg. The contract started on site. but since me and
+        my wife moved to another city in the early 2019, I have worked remotely.
+        The work has been focused on building Volvo Connect, Volvo’s next
+        generation digital platform offering digital services to its customers.
+        I have been part of the UI Framework team, which means that I have
+        worked with common libraries (UI, data layer, data fetching, etc.), best
+        practices, infrastructure (CI/CD), but I have also developed components
+        and views in React. I have used the following tech and frameworks (among
+        others): React, Redux, Redux-Saga, Express.js, AWS, Webpack, Jest, etc.
+        During a period of 6 months I was also the scrum master of my team.
+      </fbt>
     </BreadText>
-    <SubHeader>
-      2017 (3 månader). Frontendutvecklare på Maverick by Sigma (egen
-      företagare)
-    </SubHeader>
+    <H3>
+      <fbt desc="cv.experience.maverick.heading">
+        2017 (3 months). Frontend developer at Maverick by Sigma - self employed
+      </fbt>
+    </H3>
     <BreadText>
-      Under hösten 2017 tog jag mitt första heltidsuppdrag som egen företagare
-      på Maverick by Sigma, vilket är Sigmas kommunikationsbyrå. Jag jobbade då
-      tillsammans med UX-designers och designers för att ta fram hemsidor för
-      sju olika varumärken åt en av Mavericks kunder. Tekniker jag använde mig
-      av var bland annat vanilla javascript, sass och Webpack.
+      <fbt desc="cv.experience.maverick.body">
+        In the fall of 2017 I did my first full-time contract as a freelancer /
+        consultant and it was for a communication and web agency called Maverick
+        by Sigma. At Maverick I worked together with art and UX designers to
+        produce a white label website that was suited and rebrandable for 7
+        different brands. The tech stack used was Javascript, Sass and Webpack.
+      </fbt>
     </BreadText>
-    <SubHeader>2017. Fullstackutvecklare på Annevo (anställd)</SubHeader>
+    <H3>
+      <fbt desc="cv.experience.annevo.heading">
+        2017. Fullstack developer at Annevo - employed
+      </fbt>
+    </H3>
     <BreadText>
-      I början av 2017 tog jag anställning på konsultbolaget Annevo. På min tid
-      på Annevo jobbade jag med tre projekt: ett mobilspel utvecklat i Unity
-      (C#), en mobilapp utvecklad i React Native och ett rutt-optimerings-system
-      utvecklat i React (frontend) och C# .NET (backend) för kunds räkning inom
-      skadedjursbekämpningsbranchen. Fick här även erfarenhet att jobba med
-      Azure, AWS och mLab (MongoDB).
+      <fbt desc="cv.experience.annevo.body">
+        In the beginning of 2017 I started to work at a consulting agency called
+        Annevo. During my time at Annevo I worked on 3 projects: an online
+        multiplayer mobile game in Unity3d, a mobile app developed in React
+        Native, and on a route optimization system developed in React (frontend)
+        and in C# (backend). I also gained experience using Azure, AWS and mLab
+        (MongoDB).
+      </fbt>
     </BreadText>
-    <SubHeader>2017. The Astro (egen företagare)</SubHeader>
+    <H3>
+      <fbt desc="cv.experience.astro.heading">
+        2017. The Astro - self made / self published game
+      </fbt>
+    </H3>
     <BreadText>
-      Våren 2017 samarbetade jag med Youtube:rn Erik Thorsell (mer känd som
-      Hazardous) för att ta fram och utveckla ett casual mobilspel i Unity (C#).
-      Släpptes till iOS och Android och laddades ner över 30.000 gånger.
+      <fbt desc="cv.experience.astro.body">
+        In the spring of 2017 I worked together with the YouTuber Erik Thorsell
+        (also known as Hazardous) to develop a casual mobile game in Unity3D
+        (C#). It was released for both iOS and Android and was downloaded more
+        than 30000 times.
+      </fbt>
     </BreadText>
-    <SubHeader>2015. FordonsGas Sverige AB (egen företagare) </SubHeader>
+    <H3>
+      <fbt desc="cv.experience.fordonsgas.heading">
+        2015. FordonsGas Sverige (mobile app) - self employed
+      </fbt>
+    </H3>
     <BreadText>
-      Under hösten 2015 började jag för första gången frilansa som
-      egenföretagare och fick för FordonsGas Sveriges räkning ta fram en
-      mobilapp som hjälper till att hitta närliggande gastankstationer. Jag var
-      ansvarig för hela processen, från att ta fram kravbild, design och
-      utveckling till testning och lansering. Tekniker som användes var
-      Objective-C, Java, AWS och MongoDB.
+      <fbt desc="cv.experience.fordonsgas.body">
+        During the fall of 2015 I started my career working in my own company as
+        a consultant / freelancer. My first job was to develop a mobile app for
+        FordonsGas Sverige where one could find all their gas stations. I was
+        responsible for the full process, for example gather requirements,
+        design, development, testing and release. The tech used was Objective-C,
+        Java (Android), AWS and MongoDB.
+      </fbt>
     </BreadText>
-    <h1>Övriga anställningar</h1>
+    <H2>
+      <fbt desc="cv.other-experience.heading">Other experiences</fbt>
+    </H2>
     <ul>
       <ListItem>
-        2015 - 2016. CellMark - Systemutvecklare (C# och SQL).
+        <fbt desc="cv.other-experience.cellmark">
+          2015 - 2016. Developer at CellMark (C# and SQL).
+        </fbt>
       </ListItem>
       <ListItem>
-        2013 - 2015. Noventus Systems AB - Systemutvecklare (C++, C# och SQL).
+        <fbt desc="cv.other-experience-noventus">
+          2013 - 2015. Developer at Noventus (C++, C#, SQL).
+        </fbt>
       </ListItem>
-      <ListItem>2008 - 2009. Posten - brevbärare.</ListItem>
+      <ListItem>
+        <fbt desc="cv.other-experience-postman">
+          2008 - 2009. Posten - postman.
+        </fbt>
+      </ListItem>
     </ul>
-    <h1>Utbildning</h1>
+    <H2>
+      <fbt desc="cv.education.heading">Education</fbt>
+    </H2>
     <ul>
       <ListItem>
-        2009 – 2013. Undergraduate student (Bachelor Degree) på Saint John’s
-        University (Minnesota, USA) med en major i Computer Science och en minor
-        i Art.
+        <fbt desc="cv.education.stjohns">
+          2009 - 2013. Bachelor degrees from Saint John’s University (Minnesota,
+          USA) majoring in Computer Science and minioring in art.
+        </fbt>
       </ListItem>
       <ListItem>
-        2005 - 2008. Naturvetenskapliga programmet med specialinriktning idrott
-        på Porthälla Gymnasium i Partille, Göteborg.
+        <fbt desc="cv.education.porthalla">
+          2005 - 2008. High school degree in science and athletics from
+          Porthälla Gymnasium.
+        </fbt>
       </ListItem>
     </ul>
-    <h1>Akademiska Meriter</h1>
+    <H2>
+      <fbt desc="cv.acamdemic-merits.heading">Academic Merits</fbt>
+    </H2>
     <ul>
       <ListItem>
-        Magna Cum Laude (Tog examen med ett snitt över 3.75 av 4.00)
+        <fbt desc="cv.acamdemic-merits.magnacumlaude">
+          Magna Cum Laude (graduated with grades above 3.75)
+        </fbt>
       </ListItem>
     </ul>
-    <h1>Kunskaper</h1>
+    <H2>
+      <fbt desc="cv.knowledge.heading">Technical Knowledge</fbt>
+    </H2>
     <BreadText>
-      Jobbar gärna med Javascript, Node.js, React, CSS, HTML och C#. Har även
-      kunskap och erfarenhet inom AWS, React Native, Gatsby, Next.js, Unity3D,
-      Git, Photoshop och SQL/NoSQL.
+      <fbt desc="cv.knowledge.body">
+        Prefer to work with Javascript, Node.js, React, CSS, HTML and C#. I also
+        have knowledge in AWS, React Native, Gatsby, Next.js, Unity3D, Git,
+        Photoshop, SQL / NoSQL.
+      </fbt>
     </BreadText>
-    <h1>Övrigt</h1>
+    <H2>
+      <fbt desc="cv.other.heading">Other</fbt>
+    </H2>
     <ul>
-      <ListItem>Flytande svenska och engelska i tal och skrift</ListItem>
-      <ListItem>Körkort B</ListItem>
+      <ListItem>
+        <fbt desc="cv.other.language">Fluent in Swedish and English</fbt>
+      </ListItem>
+      <ListItem>
+        <fbt desc="cv.other.driverslicense">Drivers license</fbt>
+      </ListItem>
     </ul>
-    <h1>Referenser och intyg</h1>
-    <BreadText>Finns att få på begäran. </BreadText>
-    <h1>Portfolio</h1>
+    <H2>
+      <fbt desc="cv.refs.heading">References and certificates</fbt>
+    </H2>
+    <BreadText>
+      <fbt desc="cv.refs.body">Available upon request.</fbt>
+    </BreadText>
+    <H2>
+      <fbt desc="cv.portfolio.heading">Portfolio</fbt>
+    </H2>
     <ul>
       <ListItem>
-        Min Github hittas här:{' '}
-        <a href="https://github.com/AdamRamberg">
-          https://github.com/AdamRamberg
-        </a>
+        <fbt desc="cv.portfolio.github">
+          Github:
+          <a href="https://github.com/AdamRamberg">
+            https://github.com/AdamRamberg
+          </a>
+        </fbt>
       </ListItem>
       <ListItem>
-        Teknisk blogg:{' '}
-        <a href="https://medium.com/@adamramberg/">
-          https://medium.com/@adamramberg/
-        </a>
+        <fbt desc="cv.portfolio.medium">
+          Technical blog:
+          <a href="https://medium.com/@adamramberg/">
+            https://medium.com/@adamramberg/
+          </a>
+        </fbt>
       </ListItem>
       <ListItem>
-        Interaktiv portfolio från 2017 utvecklad i Unity3D:{' '}
-        <a href="http://portfolio.mambojambostudios.com/">
-          http://portfolio.mambojambostudios.com/
-        </a>
+        <fbt desc="cv.portfolio.interactive">
+          Interactive portfolio from 2017 developed in Unity3D:
+          <a href="http://portfolio.mambojambostudios.com/">
+            http://portfolio.mambojambostudios.com/
+          </a>
+        </fbt>
       </ListItem>
     </ul>
   </Wrapper>
